@@ -1,0 +1,21 @@
+# 1. Make sure you're on the branch you want to update
+git checkout test/ci
+
+# 2. Pull latest from remote for that branch (fast-forward if possible)
+git pull --rebase origin test/ci
+
+# 3. (Edit files locally now)
+
+# 4. Stage all changed files
+git add -A
+
+# 5. Commit with a helpful message
+git commit -m "feat: short description of your change"
+
+# 6. (Optional) Run local checks before pushing
+# Example for dbt:
+dbt debug --target dev
+dbt compile --target dev
+
+# 7. Push to GitHub (this updates the PR automatically)
+git push origin test/ci
