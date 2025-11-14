@@ -1,0 +1,16 @@
+# Secrets
+*.json
+dotted-hulling-*.json
+gcp-sa.json
+secrets/
+.env
+
+# dbt
+target/
+dbt_packages/
+
+# Python
+__pycache__/
+*.pyc
+envquery/
+.env

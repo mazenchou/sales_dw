@@ -18172,3 +18172,1038 @@ parsing.
 [0m15:08:15.691995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258C3F20F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258BE09CBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258BE09CA90>]}
 [0m15:08:15.692977 [debug] [MainThread]: Flushing usage events
 [0m15:08:21.147639 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:04:25.386080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B259989310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B2599C1950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B2599C0D10>]}
+
+
+============================== 17:04:25.400713 | af911d89-ec7e-4cb3-82bc-f348f43515da ==============================
+[0m17:04:25.400713 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:04:25.402708 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m17:04:25.493243 [info ] [MainThread]: dbt version: 1.10.13
+[0m17:04:25.494243 [info ] [MainThread]: python version: 3.11.9
+[0m17:04:25.495240 [info ] [MainThread]: python path: C:\Users\eki\Desktop\fsg\envquery\Scripts\python.exe
+[0m17:04:25.496485 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m17:04:46.934210 [info ] [MainThread]: Using profiles dir at C:\Users\eki\Desktop\fsg
+[0m17:04:46.935503 [info ] [MainThread]: Using profiles.yml file at C:\Users\eki\Desktop\fsg\profiles.yml
+[0m17:04:46.936509 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\eki\Desktop\fsg\dbt_project.yml
+[0m17:04:46.936509 [info ] [MainThread]: adapter type: bigquery
+[0m17:04:46.938002 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:04:47.060348 [info ] [MainThread]: Configuration:
+[0m17:04:47.061348 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:04:47.062345 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:04:47.063343 [info ] [MainThread]: Required dependencies:
+[0m17:04:47.064162 [debug] [MainThread]: Executing "git --help"
+[0m17:04:47.112268 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:04:47.113274 [debug] [MainThread]: STDERR: "b''"
+[0m17:04:47.114271 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:04:47.115268 [info ] [MainThread]: Connection:
+[0m17:04:47.115268 [info ] [MainThread]:   method: oauth
+[0m17:04:47.116671 [info ] [MainThread]:   database: dotted-hulling-477021-d2
+[0m17:04:47.116671 [info ] [MainThread]:   execution_project: dotted-hulling-477021-d2
+[0m17:04:47.118099 [info ] [MainThread]:   schema: dbt_test
+[0m17:04:47.118099 [info ] [MainThread]:   location: EU
+[0m17:04:47.119321 [info ] [MainThread]:   priority: interactive
+[0m17:04:47.119321 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m17:04:47.120351 [info ] [MainThread]:   impersonate_service_account: None
+[0m17:04:47.121352 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m17:04:47.121352 [info ] [MainThread]:   job_retries: 1
+[0m17:04:47.122734 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m17:04:47.123315 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m17:04:47.123315 [info ] [MainThread]:   timeout_seconds: 300
+[0m17:04:47.124593 [info ] [MainThread]:   client_id: None
+[0m17:04:47.124593 [info ] [MainThread]:   token_uri: None
+[0m17:04:47.125897 [info ] [MainThread]:   compute_region: None
+[0m17:04:47.127390 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m17:04:47.128395 [info ] [MainThread]:   gcs_bucket: None
+[0m17:04:47.128395 [info ] [MainThread]:   dataproc_batch: None
+[0m17:04:47.130936 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:04:48.184243 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m17:04:48.184243 [debug] [MainThread]: On debug: select 1 as id
+[0m17:04:48.185250 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:04:48.186250 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: 'Runtime Error
+  Failed to authenticate with supplied credentials
+  error:
+  File C:\Users\eki\Desktop\fsg\dotted-hulling-477021-d2-0fecdc72fd9c.json was not found.'
+[0m17:04:48.186250 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m17:04:48.187250 [debug] [MainThread]: BigQuery adapter: Database Error
+  Runtime Error
+    Failed to authenticate with supplied credentials
+    error:
+    File C:\Users\eki\Desktop\fsg\dotted-hulling-477021-d2-0fecdc72fd9c.json was not found.
+[0m17:04:48.188250 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:04:48.188572 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:04:48.189398 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:04:48.190484 [debug] [MainThread]: Command `dbt debug` failed at 17:04:48.190484 after 22.94 seconds
+[0m17:04:48.191487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B253058A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B259A12450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B276B31050>]}
+[0m17:04:48.192481 [debug] [MainThread]: Flushing usage events
+[0m17:04:50.225752 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:15:45.964278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFE79A9290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFE7A0DC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFE79A8590>]}
+
+
+============================== 17:15:45.976460 | aedc1fa1-e535-4052-9d46-2bd27b2ccd4c ==============================
+[0m17:15:45.976460 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:15:45.978466 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'log_format': 'default', 'no_print': 'None', 'write_json': 'True', 'invocation_command': 'dbt debug', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None'}
+[0m17:15:46.037637 [info ] [MainThread]: dbt version: 1.10.13
+[0m17:15:46.038634 [info ] [MainThread]: python version: 3.11.9
+[0m17:15:46.038634 [info ] [MainThread]: python path: C:\Users\eki\Desktop\fsg\envquery\Scripts\python.exe
+[0m17:15:46.040828 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m17:16:02.652438 [info ] [MainThread]: Using profiles dir at C:\Users\eki\Desktop\fsg
+[0m17:16:02.654435 [info ] [MainThread]: Using profiles.yml file at C:\Users\eki\Desktop\fsg\profiles.yml
+[0m17:16:02.656448 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\eki\Desktop\fsg\dbt_project.yml
+[0m17:16:02.658443 [info ] [MainThread]: adapter type: bigquery
+[0m17:16:02.660436 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:16:02.947749 [info ] [MainThread]: Configuration:
+[0m17:16:02.949737 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:16:02.951746 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:16:02.953764 [info ] [MainThread]: Required dependencies:
+[0m17:16:02.954745 [debug] [MainThread]: Executing "git --help"
+[0m17:16:03.071186 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:16:03.073187 [debug] [MainThread]: STDERR: "b''"
+[0m17:16:03.075187 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:16:03.076188 [info ] [MainThread]: Connection:
+[0m17:16:03.078186 [info ] [MainThread]:   method: oauth
+[0m17:16:03.079187 [info ] [MainThread]:   database: dotted-hulling-477021-d2
+[0m17:16:03.081189 [info ] [MainThread]:   execution_project: dotted-hulling-477021-d2
+[0m17:16:03.083189 [info ] [MainThread]:   schema: dbt_test
+[0m17:16:03.085190 [info ] [MainThread]:   location: EU
+[0m17:16:03.087188 [info ] [MainThread]:   priority: interactive
+[0m17:16:03.090190 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m17:16:03.092187 [info ] [MainThread]:   impersonate_service_account: None
+[0m17:16:03.094200 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m17:16:03.096227 [info ] [MainThread]:   job_retries: 1
+[0m17:16:03.099225 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m17:16:03.101227 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m17:16:03.103221 [info ] [MainThread]:   timeout_seconds: 300
+[0m17:16:03.104487 [info ] [MainThread]:   client_id: None
+[0m17:16:03.106954 [info ] [MainThread]:   token_uri: None
+[0m17:16:03.108955 [info ] [MainThread]:   compute_region: None
+[0m17:16:03.110954 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m17:16:03.113141 [info ] [MainThread]:   gcs_bucket: None
+[0m17:16:03.115138 [info ] [MainThread]:   dataproc_batch: None
+[0m17:16:03.117138 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:16:05.278845 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m17:16:05.280834 [debug] [MainThread]: On debug: select 1 as id
+[0m17:16:05.281871 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:16:05.283850 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: 'Runtime Error
+  Failed to authenticate with supplied credentials
+  error:
+  File C:\Users\eki\Desktop\fsg\dotted-hulling-477021-d2-0fecdc72fd9c.json was not found.'
+[0m17:16:05.285850 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m17:16:05.286852 [debug] [MainThread]: BigQuery adapter: Database Error
+  Runtime Error
+    Failed to authenticate with supplied credentials
+    error:
+    File C:\Users\eki\Desktop\fsg\dotted-hulling-477021-d2-0fecdc72fd9c.json was not found.
+[0m17:16:05.287860 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:16:05.289839 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:16:05.291850 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:16:05.294888 [debug] [MainThread]: Command `dbt debug` failed at 17:16:05.293876 after 19.53 seconds
+[0m17:16:05.295846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFE79ABC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFE79A8410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFE0D1EF50>]}
+[0m17:16:05.297849 [debug] [MainThread]: Flushing usage events
+[0m17:16:07.258779 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:32:05.899382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1B5C1AB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1B5C19450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1B5C19950>]}
+
+
+============================== 17:32:05.914398 | e9a74988-0e79-466c-aa6f-f0b77a5cb0f5 ==============================
+[0m17:32:05.914398 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:32:05.918399 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'printer_width': '80', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m17:32:06.015029 [info ] [MainThread]: dbt version: 1.10.13
+[0m17:32:06.017040 [info ] [MainThread]: python version: 3.11.9
+[0m17:32:06.018036 [info ] [MainThread]: python path: C:\Users\eki\Desktop\fsg\envquery\Scripts\python.exe
+[0m17:32:06.019035 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m17:32:17.757106 [info ] [MainThread]: Using profiles dir at C:\Users\eki\Desktop\fsg
+[0m17:32:17.759178 [info ] [MainThread]: Using profiles.yml file at C:\Users\eki\Desktop\fsg\profiles.yml
+[0m17:32:17.760178 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\eki\Desktop\fsg\dbt_project.yml
+[0m17:32:17.762214 [info ] [MainThread]: adapter type: bigquery
+[0m17:32:17.763214 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:32:18.120288 [info ] [MainThread]: Configuration:
+[0m17:32:18.122264 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:32:18.124343 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:32:18.126339 [info ] [MainThread]: Required dependencies:
+[0m17:32:18.128341 [debug] [MainThread]: Executing "git --help"
+[0m17:32:18.249910 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:32:18.251908 [debug] [MainThread]: STDERR: "b''"
+[0m17:32:18.253903 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:32:18.255930 [info ] [MainThread]: Connection:
+[0m17:32:18.257903 [info ] [MainThread]:   method: oauth
+[0m17:32:18.258910 [info ] [MainThread]:   database: dotted-hulling-477021-d2
+[0m17:32:18.260907 [info ] [MainThread]:   execution_project: dotted-hulling-477021-d2
+[0m17:32:18.263904 [info ] [MainThread]:   schema: dbt_test
+[0m17:32:18.265908 [info ] [MainThread]:   location: EU
+[0m17:32:18.267907 [info ] [MainThread]:   priority: interactive
+[0m17:32:18.270212 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m17:32:18.273220 [info ] [MainThread]:   impersonate_service_account: None
+[0m17:32:18.275217 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m17:32:18.277215 [info ] [MainThread]:   job_retries: 1
+[0m17:32:18.279207 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m17:32:18.281206 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m17:32:18.283206 [info ] [MainThread]:   timeout_seconds: 300
+[0m17:32:18.285611 [info ] [MainThread]:   client_id: None
+[0m17:32:18.288614 [info ] [MainThread]:   token_uri: None
+[0m17:32:18.290626 [info ] [MainThread]:   compute_region: None
+[0m17:32:18.292612 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m17:32:18.295611 [info ] [MainThread]:   gcs_bucket: None
+[0m17:32:18.296650 [info ] [MainThread]:   dataproc_batch: None
+[0m17:32:18.299624 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:32:21.201250 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m17:32:21.202818 [debug] [MainThread]: On debug: select 1 as id
+[0m17:32:21.203884 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:32:29.128168 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:55b3950a-3d44-4ee4-ae34-5253d1dbb0b2&page=queryresults
+[0m17:32:35.504835 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:32:35.507829 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:32:35.511019 [debug] [MainThread]: Command `dbt debug` succeeded at 17:32:35.509985 after 29.85 seconds
+[0m17:32:35.512061 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:32:35.513049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1B5C12390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1AF278D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B1B5C199D0>]}
+[0m17:32:35.515062 [debug] [MainThread]: Flushing usage events
+[0m17:32:37.107534 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:35:47.070462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0BEC33F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0BEC05210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0BEC04390>]}
+
+
+============================== 17:35:47.081457 | 1b27c2ec-4d45-4439-a8e9-7891c812dc33 ==============================
+[0m17:35:47.081457 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:35:47.084450 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'log_format': 'default', 'invocation_command': 'dbt run -s fct_orders monthly_revenue_by_customer_type', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m17:35:54.566349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1b27c2ec-4d45-4439-a8e9-7891c812dc33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0DBC99FD0>]}
+[0m17:35:54.636862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1b27c2ec-4d45-4439-a8e9-7891c812dc33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0BB620F90>]}
+[0m17:35:54.637862 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:35:55.734991 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m17:36:02.882444 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:36:02.883444 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:36:02.969363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1b27c2ec-4d45-4439-a8e9-7891c812dc33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0DC4413D0>]}
+[0m17:36:03.118941 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m17:36:03.123028 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m17:36:03.218121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1b27c2ec-4d45-4439-a8e9-7891c812dc33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0DBCCED10>]}
+[0m17:36:03.220111 [info ] [MainThread]: Found 10 models, 3 seeds, 93 data tests, 3 sources, 891 macros
+[0m17:36:03.222558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1b27c2ec-4d45-4439-a8e9-7891c812dc33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0DC68BE10>]}
+[0m17:36:03.229564 [info ] [MainThread]: 
+[0m17:36:03.231564 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:36:03.232552 [info ] [MainThread]: 
+[0m17:36:03.234049 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:36:03.243535 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2'
+[0m17:36:03.245568 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:03.245568 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2'
+[0m17:36:03.247557 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:08.543264 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales'
+[0m17:36:08.545258 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test'
+[0m17:36:08.546627 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:08.548622 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention'
+[0m17:36:08.550702 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:08.551701 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_staging'
+[0m17:36:08.556236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:08.563250 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:09.657342 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2_dbt_test_marts_sales, now list_dotted-hulling-477021-d2_dbt_test_core)
+[0m17:36:09.660297 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:36:10.425772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1b27c2ec-4d45-4439-a8e9-7891c812dc33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0DBD95E50>]}
+[0m17:36:10.427074 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:36:10.445447 [debug] [Thread-1 (]: Began running node model.envquery.fct_orders
+[0m17:36:10.446446 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_test_core.fct_orders .......................... [RUN]
+[0m17:36:10.448941 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.envquery.fct_orders'
+[0m17:36:10.451155 [debug] [Thread-1 (]: Began compiling node model.envquery.fct_orders
+[0m17:36:10.483942 [debug] [Thread-1 (]: Writing injected SQL for node "model.envquery.fct_orders"
+[0m17:36:10.485942 [debug] [Thread-1 (]: Began executing node model.envquery.fct_orders
+[0m17:36:10.502151 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:36:11.368018 [debug] [Thread-1 (]: Writing runtime sql for node "model.envquery.fct_orders"
+[0m17:36:11.372062 [debug] [Thread-1 (]: On model.envquery.fct_orders: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "model.envquery.fct_orders"} */
+
+  
+    
+
+    create or replace table `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+with base_combos as (
+    select
+        c.customer_sk,
+        p.product_sk,
+        o.organization_sk,
+        c.subscription_date,
+        p.price
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`dim_customers` c
+    cross join `dotted-hulling-477021-d2`.`dbt_test_core`.`dim_products` p
+    left join `dotted-hulling-477021-d2`.`dbt_test_core`.`dim_organizations` o
+        on c.customer_type != 'Individual' 
+        and lower(trim(c.customer_type)) = lower(trim(o.org_name))
+    where c.subscription_date is not null
+      and p.price > 0
+      and p.availability_status in ('In Stock', 'Limited Stock')
+),
+
+-- ✅ Deterministic sampling: use HASH of keys instead of RAND()
+sampled as (
+    select *,
+        -- Hash-based sampling: ~20% of rows (mod 5 = 0 → ~20%)
+        mod(abs(farm_fingerprint(concat(customer_sk, product_sk))), 5) as bucket
+    from base_combos
+)
+
+select
+    to_hex(md5(cast(coalesce(cast(customer_sk as string), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(product_sk as string), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(subscription_date as string), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(bucket as string), '_dbt_utils_surrogate_key_null_') as string))) as order_item_key,
+
+    customer_sk,
+    product_sk,
+    organization_sk,
+
+    -- Generate order date within 1 year of subscription
+    date_add(
+        subscription_date,
+        interval cast(floor(bucket * 73) as int64) day  -- spread over 365 days
+    ) as order_date,
+
+    1 + mod(bucket, 3) as quantity,  -- 1–3 items
+    price * (1 + mod(bucket, 3)) as amount,
+
+    current_timestamp() as load_timestamp
+
+from sampled
+where bucket = 0  -- ✅ Deterministic: exactly ~20% of rows
+    );
+  
+[0m17:36:12.285105 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:f6624942-4b7a-458a-a470-2547e7abfb79&page=queryresults
+[0m17:36:15.048448 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1b27c2ec-4d45-4439-a8e9-7891c812dc33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0BEBECC90>]}
+[0m17:36:15.050525 [info ] [Thread-1 (]: 1 of 2 OK created sql table model dbt_test_core.fct_orders ..................... [[32mCREATE TABLE (753.0 rows, 17.1 KiB processed)[0m in 4.59s]
+[0m17:36:15.053577 [debug] [Thread-1 (]: Finished running node model.envquery.fct_orders
+[0m17:36:15.055569 [debug] [Thread-3 (]: Began running node model.envquery.monthly_revenue_by_customer_type
+[0m17:36:15.056602 [info ] [Thread-3 (]: 2 of 2 START sql table model dbt_test_marts_sales.monthly_revenue_by_customer_type  [RUN]
+[0m17:36:15.060089 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.envquery.monthly_revenue_by_customer_type'
+[0m17:36:15.061087 [debug] [Thread-3 (]: Began compiling node model.envquery.monthly_revenue_by_customer_type
+[0m17:36:15.072383 [debug] [Thread-3 (]: Writing injected SQL for node "model.envquery.monthly_revenue_by_customer_type"
+[0m17:36:15.075377 [debug] [Thread-3 (]: Began executing node model.envquery.monthly_revenue_by_customer_type
+[0m17:36:15.083356 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:36:15.915218 [debug] [Thread-3 (]: Writing runtime sql for node "model.envquery.monthly_revenue_by_customer_type"
+[0m17:36:15.919227 [debug] [Thread-3 (]: On model.envquery.monthly_revenue_by_customer_type: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "model.envquery.monthly_revenue_by_customer_type"} */
+
+  
+    
+
+    create or replace table `dotted-hulling-477021-d2`.`dbt_test_marts_sales`.`monthly_revenue_by_customer_type`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+select
+    date_trunc(order_date, month) as order_month,
+    c.customer_type,
+    count(distinct f.customer_sk) as active_customers,
+    sum(f.quantity) as total_items_sold,
+    sum(f.amount) as total_revenue
+
+from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders` f
+join `dotted-hulling-477021-d2`.`dbt_test_core`.`dim_customers` c
+    on f.customer_sk = c.customer_sk
+
+group by 1, 2
+    );
+  
+[0m17:36:16.586279 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:3de1a458-1b84-4593-8760-74276ef59cd5&page=queryresults
+[0m17:36:18.744111 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1b27c2ec-4d45-4439-a8e9-7891c812dc33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0DC076510>]}
+[0m17:36:18.746111 [info ] [Thread-3 (]: 2 of 2 OK created sql table model dbt_test_marts_sales.monthly_revenue_by_customer_type  [[32mCREATE TABLE (100.0 rows, 53.7 KiB processed)[0m in 3.68s]
+[0m17:36:18.749099 [debug] [Thread-3 (]: Finished running node model.envquery.monthly_revenue_by_customer_type
+[0m17:36:18.752104 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:36:18.753105 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:36:18.754106 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2' was properly closed.
+[0m17:36:18.755103 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2' was properly closed.
+[0m17:36:18.756102 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_core' was properly closed.
+[0m17:36:18.756102 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test' was properly closed.
+[0m17:36:18.757276 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention' was properly closed.
+[0m17:36:18.757276 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_staging' was properly closed.
+[0m17:36:18.758622 [debug] [MainThread]: Connection 'model.envquery.fct_orders' was properly closed.
+[0m17:36:18.758622 [debug] [MainThread]: Connection 'model.envquery.monthly_revenue_by_customer_type' was properly closed.
+[0m17:36:18.759930 [info ] [MainThread]: 
+[0m17:36:18.761054 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 15.53 seconds (15.53s).
+[0m17:36:18.763403 [debug] [MainThread]: Command end result
+[0m17:36:18.836866 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m17:36:18.841183 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m17:36:18.849204 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\eki\Desktop\fsg\target\run_results.json
+[0m17:36:18.849204 [info ] [MainThread]: 
+[0m17:36:18.850437 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:36:18.851437 [info ] [MainThread]: 
+[0m17:36:18.852441 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m17:36:18.853547 [debug] [MainThread]: Command `dbt run` succeeded at 17:36:18.853547 after 31.92 seconds
+[0m17:36:18.854551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0BEC3F590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0B7F7EC90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A0B7F7EE10>]}
+[0m17:36:18.854551 [debug] [MainThread]: Flushing usage events
+[0m17:36:20.737457 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:36:42.921364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B409FAF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B40A62450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B40A629D0>]}
+
+
+============================== 17:36:42.927985 | 7ec8dbc3-91a4-46c1-ac42-abfcf644eef5 ==============================
+[0m17:36:42.927985 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:36:42.928994 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt test -s fct_orders', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m17:36:47.306965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7ec8dbc3-91a4-46c1-ac42-abfcf644eef5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B5DB5D910>]}
+[0m17:36:47.365974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7ec8dbc3-91a4-46c1-ac42-abfcf644eef5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B3D3D0FD0>]}
+[0m17:36:47.366974 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:36:48.092844 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m17:36:48.348079 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:36:48.348079 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:36:48.410045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7ec8dbc3-91a4-46c1-ac42-abfcf644eef5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B5E21DD10>]}
+[0m17:36:48.545472 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m17:36:48.548484 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m17:36:48.630934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7ec8dbc3-91a4-46c1-ac42-abfcf644eef5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B5DF3FFD0>]}
+[0m17:36:48.631937 [info ] [MainThread]: Found 10 models, 3 seeds, 93 data tests, 3 sources, 891 macros
+[0m17:36:48.632939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ec8dbc3-91a4-46c1-ac42-abfcf644eef5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B5E506E10>]}
+[0m17:36:48.635959 [info ] [MainThread]: 
+[0m17:36:48.636959 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:36:48.637955 [info ] [MainThread]: 
+[0m17:36:48.638953 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:36:48.646575 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention'
+[0m17:36:48.647568 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:48.648575 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_staging'
+[0m17:36:48.649919 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales'
+[0m17:36:48.651168 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:48.651168 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_core'
+[0m17:36:48.652431 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:48.653631 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:53.416967 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2_dbt_test_core, now list_dotted-hulling-477021-d2_dbt_test)
+[0m17:36:53.475901 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:36:55.681801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ec8dbc3-91a4-46c1-ac42-abfcf644eef5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B5E075A50>]}
+[0m17:36:55.685580 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:36:55.702979 [debug] [Thread-1 (]: Began running node test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c
+[0m17:36:55.703980 [debug] [Thread-2 (]: Began running node test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98
+[0m17:36:55.705979 [debug] [Thread-4 (]: Began running node test.envquery.not_null_fct_orders_customer_sk.670251d545
+[0m17:36:55.708975 [debug] [Thread-3 (]: Began running node test.envquery.not_null_fct_orders_amount.66810a8d08
+[0m17:36:55.709987 [info ] [Thread-1 (]: 1 of 12 START test dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1  [RUN]
+[0m17:36:55.710973 [info ] [Thread-2 (]: 2 of 12 START test dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1  [RUN]
+[0m17:36:55.711972 [info ] [Thread-4 (]: 4 of 12 START test not_null_fct_orders_customer_sk ............................. [RUN]
+[0m17:36:55.713971 [info ] [Thread-3 (]: 3 of 12 START test not_null_fct_orders_amount .................................. [RUN]
+[0m17:36:55.714966 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c'
+[0m17:36:55.716115 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98'
+[0m17:36:55.717117 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.envquery.not_null_fct_orders_customer_sk.670251d545'
+[0m17:36:55.718118 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.envquery.not_null_fct_orders_amount.66810a8d08'
+[0m17:36:55.719412 [debug] [Thread-1 (]: Began compiling node test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c
+[0m17:36:55.719875 [debug] [Thread-2 (]: Began compiling node test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98
+[0m17:36:55.720888 [debug] [Thread-4 (]: Began compiling node test.envquery.not_null_fct_orders_customer_sk.670251d545
+[0m17:36:55.721896 [debug] [Thread-3 (]: Began compiling node test.envquery.not_null_fct_orders_amount.66810a8d08
+[0m17:36:55.763864 [debug] [Thread-1 (]: Writing injected SQL for node "test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c"
+[0m17:36:55.770256 [debug] [Thread-2 (]: Writing injected SQL for node "test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98"
+[0m17:36:55.783578 [debug] [Thread-4 (]: Writing injected SQL for node "test.envquery.not_null_fct_orders_customer_sk.670251d545"
+[0m17:36:55.789122 [debug] [Thread-3 (]: Writing injected SQL for node "test.envquery.not_null_fct_orders_amount.66810a8d08"
+[0m17:36:55.791958 [debug] [Thread-1 (]: Began executing node test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c
+[0m17:36:55.793293 [debug] [Thread-2 (]: Began executing node test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98
+[0m17:36:55.817636 [debug] [Thread-1 (]: Writing runtime sql for node "test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c"
+[0m17:36:55.818638 [debug] [Thread-4 (]: Began executing node test.envquery.not_null_fct_orders_customer_sk.670251d545
+[0m17:36:55.821700 [debug] [Thread-2 (]: Writing runtime sql for node "test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98"
+[0m17:36:55.822917 [debug] [Thread-3 (]: Began executing node test.envquery.not_null_fct_orders_amount.66810a8d08
+[0m17:36:55.827300 [debug] [Thread-4 (]: Writing runtime sql for node "test.envquery.not_null_fct_orders_customer_sk.670251d545"
+[0m17:36:55.828298 [debug] [Thread-1 (]: On test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and amount >= 1 and amount <= 1000
+)
+ as expression
+
+
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:55.832437 [debug] [Thread-3 (]: Writing runtime sql for node "test.envquery.not_null_fct_orders_amount.66810a8d08"
+[0m17:36:55.833430 [debug] [Thread-2 (]: On test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and quantity >= 1 and quantity <= 1000
+)
+ as expression
+
+
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:55.833430 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:36:55.834739 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:36:55.836931 [debug] [Thread-4 (]: On test.envquery.not_null_fct_orders_customer_sk.670251d545: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_fct_orders_customer_sk.670251d545"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_sk
+from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+where customer_sk is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:55.838993 [debug] [Thread-3 (]: On test.envquery.not_null_fct_orders_amount.66810a8d08: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_fct_orders_amount.66810a8d08"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount
+from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+where amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:55.840996 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:36:55.842155 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:36:57.257574 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:b96b651f-4b9f-4842-8e75-05dcf4ed6efd&page=queryresults
+[0m17:36:57.325808 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:3a0ba03d-5cf6-465a-9413-618ea97adfa4&page=queryresults
+[0m17:36:57.452485 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:971225dc-daf5-46cf-aa0e-ecd44b094a6e&page=queryresults
+[0m17:36:57.770470 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:0008b6ec-2feb-41d9-8d9f-9534e08e3da0&page=queryresults
+[0m17:36:58.059415 [info ] [Thread-1 (]: 1 of 12 PASS dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1  [[32mPASS[0m in 2.34s]
+[0m17:36:58.062615 [debug] [Thread-1 (]: Finished running node test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c
+[0m17:36:58.063623 [debug] [Thread-1 (]: Began running node test.envquery.not_null_fct_orders_order_date.84f0a76362
+[0m17:36:58.065626 [info ] [Thread-1 (]: 5 of 12 START test not_null_fct_orders_order_date .............................. [RUN]
+[0m17:36:58.068619 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_amount__1000__1.ac2bded72c, now test.envquery.not_null_fct_orders_order_date.84f0a76362)
+[0m17:36:58.069627 [debug] [Thread-1 (]: Began compiling node test.envquery.not_null_fct_orders_order_date.84f0a76362
+[0m17:36:58.079639 [debug] [Thread-1 (]: Writing injected SQL for node "test.envquery.not_null_fct_orders_order_date.84f0a76362"
+[0m17:36:58.095107 [debug] [Thread-1 (]: Began executing node test.envquery.not_null_fct_orders_order_date.84f0a76362
+[0m17:36:58.103536 [debug] [Thread-1 (]: Writing runtime sql for node "test.envquery.not_null_fct_orders_order_date.84f0a76362"
+[0m17:36:58.106705 [debug] [Thread-1 (]: On test.envquery.not_null_fct_orders_order_date.84f0a76362: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_fct_orders_order_date.84f0a76362"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_date
+from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+where order_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:58.107690 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:36:58.154992 [info ] [Thread-3 (]: 3 of 12 PASS not_null_fct_orders_amount ........................................ [[32mPASS[0m in 2.44s]
+[0m17:36:58.157969 [debug] [Thread-3 (]: Finished running node test.envquery.not_null_fct_orders_amount.66810a8d08
+[0m17:36:58.158968 [debug] [Thread-3 (]: Began running node test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5
+[0m17:36:58.160982 [info ] [Thread-3 (]: 6 of 12 START test not_null_fct_orders_order_item_key .......................... [RUN]
+[0m17:36:58.163190 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.envquery.not_null_fct_orders_amount.66810a8d08, now test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5)
+[0m17:36:58.164466 [debug] [Thread-3 (]: Began compiling node test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5
+[0m17:36:58.178185 [debug] [Thread-3 (]: Writing injected SQL for node "test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5"
+[0m17:36:58.185755 [info ] [Thread-2 (]: 2 of 12 PASS dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1  [[32mPASS[0m in 2.47s]
+[0m17:36:58.187741 [debug] [Thread-2 (]: Finished running node test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98
+[0m17:36:58.190204 [debug] [Thread-2 (]: Began running node test.envquery.not_null_fct_orders_product_sk.bd279d6fcf
+[0m17:36:58.191209 [debug] [Thread-3 (]: Began executing node test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5
+[0m17:36:58.192206 [info ] [Thread-2 (]: 7 of 12 START test not_null_fct_orders_product_sk .............................. [RUN]
+[0m17:36:58.202586 [debug] [Thread-3 (]: Writing runtime sql for node "test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5"
+[0m17:36:58.203588 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.envquery.dbt_expectations_expect_column_values_to_be_between_fct_orders_quantity__1000__1.93b66f6c98, now test.envquery.not_null_fct_orders_product_sk.bd279d6fcf)
+[0m17:36:58.205574 [debug] [Thread-2 (]: Began compiling node test.envquery.not_null_fct_orders_product_sk.bd279d6fcf
+[0m17:36:58.213736 [debug] [Thread-2 (]: Writing injected SQL for node "test.envquery.not_null_fct_orders_product_sk.bd279d6fcf"
+[0m17:36:58.214738 [debug] [Thread-3 (]: On test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_item_key
+from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+where order_item_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:58.215734 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:36:58.217966 [debug] [Thread-2 (]: Began executing node test.envquery.not_null_fct_orders_product_sk.bd279d6fcf
+[0m17:36:58.224023 [debug] [Thread-2 (]: Writing runtime sql for node "test.envquery.not_null_fct_orders_product_sk.bd279d6fcf"
+[0m17:36:58.226022 [debug] [Thread-2 (]: On test.envquery.not_null_fct_orders_product_sk.bd279d6fcf: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_fct_orders_product_sk.bd279d6fcf"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_sk
+from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+where product_sk is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:58.227025 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:36:58.415614 [info ] [Thread-4 (]: 4 of 12 PASS not_null_fct_orders_customer_sk ................................... [[32mPASS[0m in 2.70s]
+[0m17:36:58.416615 [debug] [Thread-4 (]: Finished running node test.envquery.not_null_fct_orders_customer_sk.670251d545
+[0m17:36:58.418870 [debug] [Thread-4 (]: Began running node test.envquery.not_null_fct_orders_quantity.f754434156
+[0m17:36:58.418870 [info ] [Thread-4 (]: 8 of 12 START test not_null_fct_orders_quantity ................................ [RUN]
+[0m17:36:58.420870 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.envquery.not_null_fct_orders_customer_sk.670251d545, now test.envquery.not_null_fct_orders_quantity.f754434156)
+[0m17:36:58.420870 [debug] [Thread-4 (]: Began compiling node test.envquery.not_null_fct_orders_quantity.f754434156
+[0m17:36:58.430370 [debug] [Thread-4 (]: Writing injected SQL for node "test.envquery.not_null_fct_orders_quantity.f754434156"
+[0m17:36:58.432371 [debug] [Thread-4 (]: Began executing node test.envquery.not_null_fct_orders_quantity.f754434156
+[0m17:36:58.437561 [debug] [Thread-4 (]: Writing runtime sql for node "test.envquery.not_null_fct_orders_quantity.f754434156"
+[0m17:36:58.439565 [debug] [Thread-4 (]: On test.envquery.not_null_fct_orders_quantity.f754434156: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_fct_orders_quantity.f754434156"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select quantity
+from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+where quantity is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:58.440560 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:36:59.491662 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:dcb58c7d-5a26-43b8-8628-141068894197&page=queryresults
+[0m17:36:59.659732 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:4a2b5063-afc8-4450-a028-e5891e2273a7&page=queryresults
+[0m17:36:59.709757 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:dcdd43c0-4d7f-4b02-a1f0-c31439120859&page=queryresults
+[0m17:36:59.949603 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:6817cdd0-7353-441a-a0aa-e975328e57a7&page=queryresults
+[0m17:37:00.127518 [info ] [Thread-1 (]: 5 of 12 PASS not_null_fct_orders_order_date .................................... [[32mPASS[0m in 2.06s]
+[0m17:37:00.128520 [debug] [Thread-1 (]: Finished running node test.envquery.not_null_fct_orders_order_date.84f0a76362
+[0m17:37:00.129522 [debug] [Thread-1 (]: Began running node test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63
+[0m17:37:00.130526 [info ] [Thread-1 (]: 9 of 12 START test relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_  [RUN]
+[0m17:37:00.131524 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.envquery.not_null_fct_orders_order_date.84f0a76362, now test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63)
+[0m17:37:00.131524 [debug] [Thread-1 (]: Began compiling node test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63
+[0m17:37:00.142052 [debug] [Thread-1 (]: Writing injected SQL for node "test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63"
+[0m17:37:00.144477 [debug] [Thread-1 (]: Began executing node test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63
+[0m17:37:00.148502 [debug] [Thread-1 (]: Writing runtime sql for node "test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63"
+[0m17:37:00.150848 [debug] [Thread-1 (]: On test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_sk as from_field
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+    where customer_sk is not null
+),
+
+parent as (
+    select customer_sk as to_field
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`dim_customers`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:37:00.151846 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:37:00.221838 [info ] [Thread-3 (]: 6 of 12 PASS not_null_fct_orders_order_item_key ................................ [[32mPASS[0m in 2.06s]
+[0m17:37:00.225112 [debug] [Thread-3 (]: Finished running node test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5
+[0m17:37:00.226438 [debug] [Thread-3 (]: Began running node test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47
+[0m17:37:00.228488 [info ] [Thread-3 (]: 10 of 12 START test relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_  [RUN]
+[0m17:37:00.232758 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.envquery.not_null_fct_orders_order_item_key.e5a1d317f5, now test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47)
+[0m17:37:00.235757 [debug] [Thread-3 (]: Began compiling node test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47
+[0m17:37:00.253557 [debug] [Thread-3 (]: Writing injected SQL for node "test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47"
+[0m17:37:00.255557 [debug] [Thread-3 (]: Began executing node test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47
+[0m17:37:00.264615 [debug] [Thread-3 (]: Writing runtime sql for node "test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47"
+[0m17:37:00.267642 [debug] [Thread-3 (]: On test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select organization_sk as from_field
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+    where organization_sk is not null
+),
+
+parent as (
+    select organization_sk as to_field
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`dim_organizations`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:37:00.269635 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:37:00.473439 [info ] [Thread-4 (]: 8 of 12 PASS not_null_fct_orders_quantity ...................................... [[32mPASS[0m in 2.05s]
+[0m17:37:00.474434 [debug] [Thread-4 (]: Finished running node test.envquery.not_null_fct_orders_quantity.f754434156
+[0m17:37:00.475514 [debug] [Thread-4 (]: Began running node test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4
+[0m17:37:00.476513 [info ] [Thread-4 (]: 11 of 12 START test relationships_fct_orders_product_sk__product_sk__ref_dim_products_  [RUN]
+[0m17:37:00.477516 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.envquery.not_null_fct_orders_quantity.f754434156, now test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4)
+[0m17:37:00.477516 [debug] [Thread-4 (]: Began compiling node test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4
+[0m17:37:00.489842 [debug] [Thread-4 (]: Writing injected SQL for node "test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4"
+[0m17:37:00.491840 [debug] [Thread-4 (]: Began executing node test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4
+[0m17:37:00.495996 [debug] [Thread-4 (]: Writing runtime sql for node "test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4"
+[0m17:37:00.498513 [debug] [Thread-4 (]: On test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select product_sk as from_field
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+    where product_sk is not null
+),
+
+parent as (
+    select product_sk as to_field
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`dim_products`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:37:00.499521 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:37:00.617000 [info ] [Thread-2 (]: 7 of 12 PASS not_null_fct_orders_product_sk .................................... [[32mPASS[0m in 2.41s]
+[0m17:37:00.618999 [debug] [Thread-2 (]: Finished running node test.envquery.not_null_fct_orders_product_sk.bd279d6fcf
+[0m17:37:00.619999 [debug] [Thread-2 (]: Began running node test.envquery.unique_fct_orders_order_item_key.80e8b59b28
+[0m17:37:00.619999 [info ] [Thread-2 (]: 12 of 12 START test unique_fct_orders_order_item_key ........................... [RUN]
+[0m17:37:00.621105 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.envquery.not_null_fct_orders_product_sk.bd279d6fcf, now test.envquery.unique_fct_orders_order_item_key.80e8b59b28)
+[0m17:37:00.622584 [debug] [Thread-2 (]: Began compiling node test.envquery.unique_fct_orders_order_item_key.80e8b59b28
+[0m17:37:00.631585 [debug] [Thread-2 (]: Writing injected SQL for node "test.envquery.unique_fct_orders_order_item_key.80e8b59b28"
+[0m17:37:00.633583 [debug] [Thread-2 (]: Began executing node test.envquery.unique_fct_orders_order_item_key.80e8b59b28
+[0m17:37:00.638584 [debug] [Thread-2 (]: Writing runtime sql for node "test.envquery.unique_fct_orders_order_item_key.80e8b59b28"
+[0m17:37:00.640980 [debug] [Thread-2 (]: On test.envquery.unique_fct_orders_order_item_key.80e8b59b28: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.unique_fct_orders_order_item_key.80e8b59b28"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select order_item_key as unique_field
+  from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+  where order_item_key is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:37:00.642978 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:37:01.839050 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:2be09e39-75ca-459e-9971-7b2aae9af628&page=queryresults
+[0m17:37:01.897523 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:f0cda448-9b19-4316-b40c-247177b014e9&page=queryresults
+[0m17:37:01.995869 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:81fc9c19-0b8e-4d48-adec-3a3f5794948b&page=queryresults
+[0m17:37:02.093358 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:37a3891b-1017-46b1-8be4-10fbc94a457a&page=queryresults
+[0m17:37:02.394930 [info ] [Thread-4 (]: 11 of 12 PASS relationships_fct_orders_product_sk__product_sk__ref_dim_products_  [[32mPASS[0m in 1.92s]
+[0m17:37:02.398381 [debug] [Thread-4 (]: Finished running node test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4
+[0m17:37:02.533921 [info ] [Thread-2 (]: 12 of 12 PASS unique_fct_orders_order_item_key ................................. [[32mPASS[0m in 1.91s]
+[0m17:37:02.545344 [debug] [Thread-2 (]: Finished running node test.envquery.unique_fct_orders_order_item_key.80e8b59b28
+[0m17:37:02.605111 [info ] [Thread-1 (]: 9 of 12 PASS relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_  [[32mPASS[0m in 2.47s]
+[0m17:37:02.608099 [debug] [Thread-1 (]: Finished running node test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63
+[0m17:37:02.741732 [info ] [Thread-3 (]: 10 of 12 PASS relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_  [[32mPASS[0m in 2.51s]
+[0m17:37:02.746771 [debug] [Thread-3 (]: Finished running node test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47
+[0m17:37:02.753887 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:37:02.758054 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:37:02.761569 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention' was properly closed.
+[0m17:37:02.763894 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_staging' was properly closed.
+[0m17:37:02.766593 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales' was properly closed.
+[0m17:37:02.768919 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test' was properly closed.
+[0m17:37:02.770932 [debug] [MainThread]: Connection 'test.envquery.relationships_fct_orders_customer_sk__customer_sk__ref_dim_customers_.228a2feb63' was properly closed.
+[0m17:37:02.773237 [debug] [MainThread]: Connection 'test.envquery.unique_fct_orders_order_item_key.80e8b59b28' was properly closed.
+[0m17:37:02.774548 [debug] [MainThread]: Connection 'test.envquery.relationships_fct_orders_product_sk__product_sk__ref_dim_products_.1211910ed4' was properly closed.
+[0m17:37:02.775595 [debug] [MainThread]: Connection 'test.envquery.relationships_fct_orders_organization_sk__organization_sk__ref_dim_organizations_.3164f01b47' was properly closed.
+[0m17:37:02.776595 [info ] [MainThread]: 
+[0m17:37:02.777585 [info ] [MainThread]: Finished running 12 data tests in 0 hours 0 minutes and 14.14 seconds (14.14s).
+[0m17:37:02.784610 [debug] [MainThread]: Command end result
+[0m17:37:03.052360 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m17:37:03.055358 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m17:37:03.065378 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\eki\Desktop\fsg\target\run_results.json
+[0m17:37:03.066379 [info ] [MainThread]: 
+[0m17:37:03.067543 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:37:03.068027 [info ] [MainThread]: 
+[0m17:37:03.068856 [info ] [MainThread]: Done. PASS=12 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=12
+[0m17:37:03.069599 [debug] [MainThread]: Command `dbt test` succeeded at 17:37:03.069599 after 20.25 seconds
+[0m17:37:03.070788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B39FE8C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B39FE8CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020B39FE8DD0>]}
+[0m17:37:03.070788 [debug] [MainThread]: Flushing usage events
+[0m17:37:04.926262 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:21:25.310956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A12A2AB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A127CEBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A12A2A0D0>]}
+
+
+============================== 19:21:25.316352 | 53007661-7807-4875-a0cb-623b88d5f22b ==============================
+[0m19:21:25.316352 [info ] [MainThread]: Running with dbt=1.10.13
+[0m19:21:25.318366 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'c:\\Users\\eki\\Desktop\\fsg', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'no_print': 'None', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'log_path': 'c:\\Users\\eki\\Desktop\\fsg\\logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt ', 'printer_width': '80', 'write_json': 'True'}
+[0m19:21:25.454373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '53007661-7807-4875-a0cb-623b88d5f22b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A13B6E750>]}
+[0m19:21:25.589849 [debug] [MainThread]: Set downloads directory='C:\Users\eki\AppData\Local\Temp\dbt-downloads-6n63e1na'
+[0m19:21:25.591271 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:21:26.525412 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:21:26.527413 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:21:27.173778 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:21:27.180707 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m19:21:28.098422 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m19:21:28.103517 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m19:21:28.906123 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m19:21:28.909008 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_date` package is deprecated in favor of
+`godatadriven/dbt_date`. Please update your `packages.yml` configuration to use
+`godatadriven/dbt_date` instead.
+[0m19:21:28.910020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '53007661-7807-4875-a0cb-623b88d5f22b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A13BB37D0>]}
+[0m19:21:28.912291 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m19:21:30.644089 [info ] [MainThread]: Installed from version 1.3.2
+[0m19:21:30.645419 [info ] [MainThread]: Up to date!
+[0m19:21:30.646538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '53007661-7807-4875-a0cb-623b88d5f22b', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A12B49890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A13B6F590>]}
+[0m19:21:30.646538 [info ] [MainThread]: Installing metaplane/dbt_expectations
+[0m19:21:43.394296 [info ] [MainThread]: Installed from version 0.10.4
+[0m19:21:43.395501 [info ] [MainThread]: Updated version available: 0.10.9
+[0m19:21:43.395501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '53007661-7807-4875-a0cb-623b88d5f22b', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A0F6AD490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A13B6F590>]}
+[0m19:21:43.396501 [info ] [MainThread]: Installing calogica/dbt_date
+[0m19:21:44.405388 [info ] [MainThread]: Installed from version 0.10.1
+[0m19:21:44.406548 [info ] [MainThread]: Up to date!
+[0m19:21:44.406548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '53007661-7807-4875-a0cb-623b88d5f22b', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A13C3F490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A13CBEE50>]}
+[0m19:21:44.407707 [info ] [MainThread]: 
+[0m19:21:44.408712 [info ] [MainThread]: Updates available for packages: ['metaplane/dbt_expectations']                 
+Update your versions in packages.yml, then run dbt deps
+[0m19:21:44.412731 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PackageRedirectDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m19:21:44.414251 [debug] [MainThread]: Command `cli deps` succeeded at 19:21:44.414251 after 19.22 seconds
+[0m19:21:44.415250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A126C9C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A127CEA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A12A18B10>]}
+[0m19:21:44.415250 [debug] [MainThread]: Flushing usage events
+[0m19:21:45.786561 [debug] [MainThread]: An error was encountered while trying to flush usage events
