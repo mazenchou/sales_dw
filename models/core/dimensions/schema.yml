@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Type 1 SCD customer dimension. One row per customer."
+    columns:
+      - name: customer_sk
+        description: "Surrogate key (MD5 hash of customer_id)"
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:  # ✅ NEW: wrap in `arguments`
+                to: ref('stg_customers')
+                field: customer_sk
+
+      - name: customer_id
+        tests: [unique, not_null]
+
+      - name: email
+        tests: [not_null]
+
+      - name: subscription_date
+        tests: [not_null]
+
+  - name: dim_products
+    description: "Product dimension with variant-aware keys."
+    columns:
+      - name: product_sk
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_sk
+      - name: product_id
+        tests: [not_null]
+      - name: price
+        tests: [not_null]
+
+
+  - name: dim_organizations
+    description: "B2B organization dimension. One row per org."
+    columns:
+      - name: organization_sk
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_organizations')
+                field: organization_sk
+      - name: organization_id
+        tests: [not_null]
+      - name: org_name
+        tests: [not_null]

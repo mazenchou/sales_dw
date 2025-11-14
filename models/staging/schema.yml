@@ -1,0 +1,100 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Standardized customer records from customers_100.csv. Business key = `Customer Id`."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: ['customer_id']
+    columns:
+      - name: customer_sk
+        description: "Hash-based surrogate key (MD5 of `Customer Id`)"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Original business key from source"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - not_null
+          # Optional later: regex test once format confirmed
+      - name: subscription_date
+        tests:
+          - not_null
+          - dbt_utils.not_accepted_values:
+              values: ['1900-01-01', '9999-12-31']
+
+
+  - name: stg_products
+    description: "Standardized product catalog from products-100.csv."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: ['product_id']
+    columns:
+      - name: product_sk
+        tests: 
+          - unique
+          - not_null
+      - name: product_id
+        tests: 
+          - unique
+          - not_null
+      - name: product_name
+        tests: [not_null]
+      - name: price
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 100000
+      - name: currency
+        tests:
+          - not_null
+          - accepted_values: 
+              values: ['USD', 'EUR', 'GBP']
+      - name: stock_qty
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_greater_than_or_equal_to:
+              arguments:
+                value: 0
+      - name: availability_status
+        tests:
+          - accepted_values: 
+              values: ['In Stock', 'Out of Stock', 'Pre-order','Limited Stock','Backorder','Discontinued','Unknown']
+              config:
+                # Allow some invalid values temporarily while you fix data
+                severity: warn
+
+
+  - name: stg_organizations
+    description: "Standardized B2B organization records."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: ['organization_id']
+    columns:
+      - name: organization_sk
+        tests: [unique, not_null]
+      - name: organization_id
+        tests: [not_null]
+      - name: org_name
+        tests: [not_null]
+      - name: country_code
+        tests: [not_null]
+      - name: founded_year
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1800
+                max_value: "{{ modules.datetime.datetime.now().year }}"
+      - name: employee_count
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 1
+                max_value: 1000000

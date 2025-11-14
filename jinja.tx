@@ -1,0 +1,14 @@
+in sql :
+SELECT id, name, created_at FROM raw.users;
+
+in jinja :
+SELECT
+  {{ var("user_id_column") }} AS user_id,
+  {{ dbt_utils.star(from=ref('stg_users'), except=["password"]) }}
+FROM {{ ref('stg_users') }}
+
+
+1.What’s the difference between ref('model') and source('schema', 'table')? 
+When to use each?
+1.1 {{ ref('stg_orders') }}: All transformed data (staging/,core/,marts/)
+1.2 {{ source('stripe', 'charges') }} :  Only in staging/

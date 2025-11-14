@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: monthly_revenue_by_customer_type
+    description: "Monthly sales KPIs by B2B/B2C segment."
+    columns:
+      - name: order_month
+        tests: [not_null]
+      - name: total_revenue
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_greater_than:
+              arguments:
+                value: 0

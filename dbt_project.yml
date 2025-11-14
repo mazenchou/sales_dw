@@ -1,0 +1,16 @@
+name: envquery
+version: 1.0.0
+config-version: 2
+
+profile: envquery
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+seeds:
+  envquery:
+    +schema: staging       # seeds go into staging layer (raw)
+    +quote_columns: false
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['dbt_utils']

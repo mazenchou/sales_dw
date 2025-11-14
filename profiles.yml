@@ -1,0 +1,14 @@
+envquery:
+  outputs:
+    dev:
+      dataset: dbt_test
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:\Users\eki\Desktop\fsg\dotted-hulling-477021-d2-1f399f1e41e1.json
+      location: EU
+      method: service-account
+      priority: interactive
+      project: dotted-hulling-477021-d2
+      threads: 4
+      type: bigquery
+  target: dev

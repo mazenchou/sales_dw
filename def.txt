@@ -1,0 +1,74 @@
+different between : sources.yml , schema.yml, profiles.yml,dbt_project.yml?
+📁 1. profiles.yml
+🎯 Purpose: Where and how dbt connects to your data platform (e.g., BigQuery).
+putting "dev", "staging", "prod"
+
+📁 2. dbt_project.yml
+🎯 Purpose: Project-wide configuration — name, structure, defaults.
+📦 Scope: Project-specific — always committed to Git. Defines how your project is built.
+putting the "staging" , "core" and "matrs"
+
+📁 3. sources.yml
+🎯 Purpose: Document and test your raw input data — the “source of truth”.
+📍 Location: Typically in models/ or models/sources/ — committed to Git.
+
+📁 4. schema.yml
+Purpose: schema.yml is your data contract + documentation engine
+🎯 Purpose: Document and test your transformed models (staging, dims, facts, marts).
+📍 Location: Co-located with models (e.g., models/staging/schema.yml, models/core/schema.yml) — committed to Git.
+ and You now know your data is clean — or exactly where it’s broken.
+
+ 5.abt the folder core/
+ that have the the clean data in dim and fact 
+ design the link between them 
+
+6.Macros/: put in it functions with params in each dataset that we need in our mean code 
+and to avoid repetition in jinja or sql
+
+7.Data lineage is the end-to-end tracking of data flow: 
+from raw source 
+→ transformations (dbt models) 
+→ final dashboards (e.g., Looker, Tableau).
+for seeing why this kpi for example wrong ?
+or test what breaks when i change this or this ?
+
+8.staging/ folder for 
+Standardize & clean raw inputs
+
+9.core/ folder conform to dimensions and fact
+
+10.marts/ folder :answer specific business questions kpi (revenue, retention, etc.)
+
+
+11.dev env :the developper use to test logic or add new logic
+12.staging env : Full end-to-end test (sources → marts) the use use it 
+13.prod env : Production — serving business decisions ,Used by dashboards, ML models, APIs
+
+14.dbt run -s dim_products vs dbt test -s dim_products:
+
+14.1 dbt run -s dim_products
+Executes the SQL in
+dim_products.sql
+→ creates/refreshes the table in BigQuery
+BigQuery:
+dev_sales_dw.core_dim_products
+
+
+14.2 dbt test -s dim_products
+Runs data quality tests
+checks uniqueness, nulls, relationships
+Terminal:
+PASS=5 WARN=0 ERROR=0
+
+15.CI (Continuous Integration)
+
+16.CD (Continuous Delivery):
+Deploy to staging
+After manual approval: deploy to prod
+
+17.After Building the Warehouse: Make It a DevOps Project
+but how ?
+
+18.PR Workflow (Step-by-Step)?
+
+19. Deployment Workflow (dev → staging → prod) example sales_dw?
