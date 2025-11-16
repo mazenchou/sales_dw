@@ -24,7 +24,7 @@ sources:
             tests:
               - unique
               - not_null
-          - name: First Name
+          - name: "`First Name`"
             tests: [not_null]
           - name: Last Name
             tests: [not_null]
@@ -34,9 +34,9 @@ sources:
             tests: [not_null]
           - name: Country
             tests: [not_null]
-          - name: Phone 1
+          - name: "`Phone 1`"
             description: "Primary contact number"
-          - name: Phone 2
+          - name: "`Phone 2`"
             description: "Secondary contact number"
           - name: Email
             tests:
@@ -44,7 +44,7 @@ sources:
               - dbt_expectations.expect_column_values_to_match_regex:
                   arguments:
                     regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'
-          - name: Subscription Date
+          - name: "`Subscription Date`"
             data_type: date
             description: "When customer subscribed (ISO 'YYYY-MM-DD')"
             tests:
@@ -68,7 +68,7 @@ sources:
         columns:
           - name: Index
             tests: [not_null]
-          - name: Organization Id
+          - name: "`Organization Id`"
             description: "Business key — unique across organizations"
             tests:
               - unique
@@ -88,7 +88,7 @@ sources:
                     min_value: 1800
                     max_value: "{{ modules.datetime.datetime.now().year }}"
           - name: Industry
-          - name: Number of employees
+          - name: "`Number of employees`"
             data_type: int
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
@@ -155,6 +155,6 @@ sources:
               - accepted_values:
                   arguments:
                     values: ['In Stock', 'Out of Stock', 'Pre-order']
-          - name: Internal ID
+          - name: "`Internal ID`"
             description: "Internal SKU — may be duplicate if multi-variant"
             tests: [not_null]
