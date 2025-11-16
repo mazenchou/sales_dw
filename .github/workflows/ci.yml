@@ -3,11 +3,14 @@ name: dbt CI
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DBT_PROFILES_DIR: ${{ github.workspace }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -17,26 +20,32 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dbt-bigquery (core + adapter) test test
-        run: pip install dbt-bigquery
-
-      - name: Authenticate to GCP via ADC
+      - name: Install dbt and dependencies
         run: |
-          echo "Setting up Application Default Credentials..."
-          gcloud auth configure-docker
-          gcloud auth application-default set-quota-project dotted-hulling-477021-d2
+          pip install dbt-bigquery
 
-      - name: Install dbt packages (dbt_utils, dbt_expectations)
-        run: dbt deps
+      - name: Authenticate to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Install dbt packages
+        run: dbt deps --target dev
 
       - name: dbt debug
         run: dbt debug --target dev
 
-      - name: dbt compile
+      - name: dbt compile (syntax check)
         run: dbt compile --target dev
 
-      - name: dbt build
+      - name: dbt build (run + test)
         run: dbt build --target dev --fail-fast
 
       - name: Generate docs
         run: dbt docs generate --target dev
+
+      - name: Upload docs artifact (optional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: dbt-docs
+          path: target/
