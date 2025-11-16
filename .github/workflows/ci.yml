@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dbt-bigquery (core + adapter)
+      - name: Install dbt-bigquery (core + adapter) test test
         run: pip install dbt-bigquery
 
       - name: Authenticate to GCP via ADC
