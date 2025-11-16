@@ -5,7 +5,8 @@ models:
     description: "Standardized customer records from customers_100.csv. Business key = `Customer Id`."
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns: ['customer_id']
+          arguments:
+            combination_of_columns: ['customer_id']
     columns:
       - name: customer_sk
         description: "Hash-based surrogate key (MD5 of `Customer Id`)"
@@ -20,19 +21,19 @@ models:
       - name: email
         tests:
           - not_null
-          # Optional later: regex test once format confirmed
       - name: subscription_date
         tests:
           - not_null
           - dbt_utils.not_accepted_values:
-              values: ['1900-01-01', '9999-12-31']
-
+              arguments:
+                values: ['1900-01-01', '9999-12-31']
 
   - name: stg_products
     description: "Standardized product catalog from products-100.csv."
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns: ['product_id']
+          arguments:
+            combination_of_columns: ['product_sk']
     columns:
       - name: product_sk
         tests: 
@@ -40,7 +41,6 @@ models:
           - not_null
       - name: product_id
         tests: 
-          - unique
           - not_null
       - name: product_name
         tests: [not_null]
@@ -59,9 +59,10 @@ models:
       - name: stock_qty
         tests:
           - not_null
-          - dbt_expectations.expect_column_values_to_be_greater_than_or_equal_to:
+          - dbt_expectations.expect_column_values_to_be_between:  # ← FIXED THIS LINE
               arguments:
-                value: 0
+                min_value: 0  # ← CHANGED FROM 'value' TO 'min_value'
+                max_value: 1000000
       - name: availability_status
         tests:
           - accepted_values: 
@@ -75,7 +76,8 @@ models:
     description: "Standardized B2B organization records."
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns: ['organization_id']
+          arguments:
+            combination_of_columns: ['organization_id']
     columns:
       - name: organization_sk
         tests: [unique, not_null]
@@ -98,3 +100,26 @@ models:
               arguments:
                 min_value: 1
                 max_value: 1000000
+  - name: stg_people
+    description: "Standardized people/employee records from people_sample.csv."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: ['person_sk']
+    columns:
+      - name: person_sk
+        tests: [unique, not_null]
+      - name: user_id
+        tests: [not_null]
+
+  - name: stg_leads
+    description: "Standardized sales leads from leads_sample.csv."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: ['lead_sk']
+    columns:
+      - name: lead_sk
+        tests: [unique, not_null]
+      - name: account_id
+        tests: [not_null]

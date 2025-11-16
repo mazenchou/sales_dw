@@ -26,6 +26,18 @@ models:
               arguments:
                 to: ref('dim_organizations')
                 field: organization_sk
+      - name: person_sk                    # ← NEW
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_people')
+                field: person_sk
+      - name: lead_sk                      # ← NEW
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_leads')
+                field: lead_sk
       - name: order_date
         tests: [not_null]
       - name: quantity

@@ -55,3 +55,23 @@ models:
         tests: [not_null]
       - name: org_name
         tests: [not_null]
+
+  - name: dim_people
+    description: "Dimension table for people/employees."
+    columns:
+      - name: person_sk
+        description: "Surrogate key for people dimension"
+        tests: [unique, not_null]
+      - name: user_id
+        description: "Business key for people"
+        tests: [not_null]
+
+  - name: dim_leads
+    description: "Dimension table for sales leads."
+    columns:
+      - name: lead_sk
+        description: "Surrogate key for leads dimension"
+        tests: [unique, not_null]
+      - name: account_id
+        description: "Business key for leads"
+        tests: [not_null]
