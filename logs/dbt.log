@@ -20407,3 +20407,100 @@ where months_since_cohort is null
 [0m10:59:44.890008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10F6A1F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10F6A24D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10898F150>]}
 [0m10:59:44.891064 [debug] [MainThread]: Flushing usage events
 [0m10:59:45.945673 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:11:14.546323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025668449C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256684AA890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256684A9F10>]}
+
+
+============================== 13:11:14.561276 | 7eab206a-661d-4687-ad83-fdc7a7384d1d ==============================
+[0m13:11:14.561276 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:11:14.563263 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'use_colors': 'True', 'log_format': 'default', 'target_path': 'None', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'warn_error': 'None', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt deps', 'printer_width': '80', 'write_json': 'True'}
+[0m13:11:14.845131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7eab206a-661d-4687-ad83-fdc7a7384d1d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002566508B2D0>]}
+[0m13:11:14.969973 [debug] [MainThread]: Set downloads directory='C:\Users\eki\AppData\Local\Temp\dbt-downloads-f428r63t'
+[0m13:11:14.971957 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:11:15.748674 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:11:15.756673 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:11:16.278788 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:11:16.310820 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m13:11:16.803925 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m13:11:16.810912 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m13:11:16.814895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '7eab206a-661d-4687-ad83-fdc7a7384d1d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025669676D10>]}
+[0m13:11:16.827906 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m13:11:17.333590 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m13:11:17.357169 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m13:11:17.881725 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m13:11:17.921692 [error] [MainThread]: Encountered an error:
+Found duplicate project "dbt_date". This occurs when a dependency has the same project name as some other dependency.
+[0m13:11:18.155739 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\requires.py", line 303, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\main.py", line 461, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\task\deps.py", line 223, in run
+    self.lock()
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\task\deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\deps\resolver.py", line 136, in resolve_packages
+    _check_for_duplicate_project_names(resolved, project, renderer)
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\deps\resolver.py", line 110, in _check_for_duplicate_project_names
+    raise DuplicateProjectDependencyError(project_name)
+dbt.exceptions.DuplicateProjectDependencyError: Found duplicate project "dbt_date". This occurs when a dependency has the same project name as some other dependency.
+
+[0m13:11:18.160255 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PackageRedirectDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:11:18.163585 [debug] [MainThread]: Command `dbt deps` failed at 13:11:18.162239 after 3.79 seconds
+[0m13:11:18.164627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025661A68D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256680E7ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002566176F050>]}
+[0m13:11:18.165627 [debug] [MainThread]: Flushing usage events
+[0m13:11:19.284472 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:12:32.398169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E71A110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E751390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E4B5C10>]}
+
+
+============================== 13:12:32.405854 | 983e7588-35d9-46bb-9fda-3df7f1242436 ==============================
+[0m13:12:32.405854 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:12:32.406827 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt deps', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m13:12:32.580586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '983e7588-35d9-46bb-9fda-3df7f1242436', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860F848F50>]}
+[0m13:12:32.634684 [debug] [MainThread]: Set downloads directory='C:\Users\eki\AppData\Local\Temp\dbt-downloads-vp5fv7o4'
+[0m13:12:32.636693 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:12:33.684093 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:12:33.692084 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:12:35.048254 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:12:35.068248 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m13:12:35.581541 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m13:12:35.603527 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m13:12:36.103311 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m13:12:36.135504 [info ] [MainThread]: Updating lock file in file path: C:\Users\eki\Desktop\fsg/package-lock.yml
+[0m13:12:36.643346 [debug] [MainThread]: Set downloads directory='C:\Users\eki\AppData\Local\Temp\dbt-downloads-3fzubv9c'
+[0m13:12:36.664389 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m13:12:37.785877 [info ] [MainThread]: Installed from version 1.3.2
+[0m13:12:37.786872 [info ] [MainThread]: Up to date!
+[0m13:12:37.787871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '983e7588-35d9-46bb-9fda-3df7f1242436', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860F8435D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860F8A7050>]}
+[0m13:12:37.787871 [info ] [MainThread]: Installing metaplane/dbt_expectations
+[0m13:12:43.273805 [info ] [MainThread]: Installed from version 0.10.9
+[0m13:12:43.274892 [info ] [MainThread]: Up to date!
+[0m13:12:43.275891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '983e7588-35d9-46bb-9fda-3df7f1242436', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860F89C8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E7FED90>]}
+[0m13:12:43.276890 [info ] [MainThread]: Installing godatadriven/dbt_date
+[0m13:12:44.315259 [info ] [MainThread]: Installed from version 0.17.0
+[0m13:12:44.316262 [info ] [MainThread]: Up to date!
+[0m13:12:44.317335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '983e7588-35d9-46bb-9fda-3df7f1242436', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E77C850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E7FFB50>]}
+[0m13:12:44.321154 [debug] [MainThread]: Command `dbt deps` succeeded at 13:12:44.321154 after 12.04 seconds
+[0m13:12:44.322185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028607D48C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028607A4EE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028607A4F150>]}
+[0m13:12:44.323475 [debug] [MainThread]: Flushing usage events
+[0m13:12:45.252444 [debug] [MainThread]: An error was encountered while trying to flush usage events

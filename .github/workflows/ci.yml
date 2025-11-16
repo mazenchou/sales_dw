@@ -32,6 +32,11 @@ jobs:
       - name: Install dbt packages
         run: dbt deps --target dev
 
+      - name: Clean install dbt packages
+        run: |
+          rm -rf dbt_packages
+          dbt deps --target dev
+
       - name: Verify packages installed
         run: dbt deps --target dev  # Run twice to ensure installation
 
