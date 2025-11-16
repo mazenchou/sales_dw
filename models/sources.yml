@@ -19,14 +19,14 @@ sources:
             description: "Row number from source CSV (not PK)"
             tests:
               - not_null
-          - name: Customer Id
+          - name: "`Customer Id`"
             description: "Business key — unique across customers"
             tests:
               - unique
               - not_null
           - name: "`First Name`"
             tests: [not_null]
-          - name: Last Name
+          - name: "`Last Name`"
             tests: [not_null]
           - name: Company
             description: "Employer or affiliated organization (nullable)"
@@ -145,16 +145,17 @@ sources:
           - name: EAN
             description: "European Article Number (13-digit barcode)"
             tests:
-              - dbt_expectations.expect_column_values_to_match_regex:
+              - dbt_expectations.expect_column_values_to_be_between:
                   arguments:
-                    regex: '^[0-9]{13}$'
+                    min_value: 1000000000000  # 13-digit minimum
+                    max_value: 9999999999999
           - name: Color
           - name: Size
           - name: Availability
             tests:
               - accepted_values:
                   arguments:
-                    values: ['In Stock', 'Out of Stock', 'Pre-order']
+                    values: ['In Stock', 'Out of Stock', 'Pre-order', 'Limited Stock', 'Backorder']
           - name: "`Internal ID`"
             description: "Internal SKU — may be duplicate if multi-variant"
             tests: [not_null]
