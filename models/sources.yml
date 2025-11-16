@@ -13,7 +13,7 @@ sources:
 
     tables:
       - name: customers
-        identifier: customers
+        identifier: clients
         description: "Individual customer records"
         columns:
           - name: index
@@ -42,9 +42,9 @@ sources:
           - name: email
             tests:
               - not_null
-              - dbt_expectations.expect_column_values_to_match_regex:
-                  arguments:
-                    regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+          - dbt_expectations.expect_column_values_to_match_regex:
+              arguments:
+                regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'
           - name: subscription_date
             data_type: date
             description: "When customer subscribed (ISO 'YYYY-MM-DD')"
@@ -52,7 +52,7 @@ sources:
               - not_null
               - dbt_utils.expression_is_true:
                   arguments:
-                    expression: "`subscription_date` <= current_date"
+                    expression: "subscription_date <= current_date"
           - name: website
             description: "Personal or company website (nullable)"
 
@@ -68,7 +68,7 @@ sources:
 
     tables:
       - name: organizations
-        identifier: organizations
+        identifier: orgs
         description: "Business organization records"
         columns:
           - name: index
@@ -112,6 +112,7 @@ sources:
       error_after: {count: 168, period: hour}
     loaded_at_field: _uploaded_at
 
+    # In raw_products table - FIX COLUMN NAMES:
     tables:
       - name: products
         identifier: products
@@ -140,7 +141,7 @@ sources:
               - accepted_values:
                   arguments:
                     values: ['USD', 'EUR', 'GBP']
-          - name: stock
+          - name: Stock  # ← CHANGED FROM 'stock' TO 'Stock'
             data_type: int
             tests:
               - not_null
