@@ -5,7 +5,7 @@ envquery:
       type: bigquery
       method: oauth
       project: dotted-hulling-477021-d2
-      dataset: dbt_test        # ← your dev models
+      dataset: raw_staging          # ← your dev models
       threads: 4
       location: EU
 
@@ -13,6 +13,6 @@ envquery:
       type: bigquery
       method: oauth
       project: dotted-hulling-477021-d2
-      dataset: raw             # ← seeds land here
+      dataset: raw_staging               # ← seeds land here
       threads: 1
       location: EU
