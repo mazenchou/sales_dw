@@ -23,7 +23,8 @@ jobs:
 
       - name: Install dbt and dependencies
         run: |
-          pip install dbt-bigquery dbt-utils dbt-expectations
+          # Install only the dbt adapter and core
+          pip install dbt-bigquery
 
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v2
@@ -32,6 +33,9 @@ jobs:
 
       - name: Set quota project (fix ADC warning)
         run: gcloud auth application-default set-quota-project dotted-hulling-477021-d2
+
+      - name: Install dbt packages
+        run: dbt deps --target dev # This installs packages from packages.yml
 
       - name: dbt debug
         run: dbt debug --target dev
