@@ -20,12 +20,12 @@ models:
       - name: email
         tests:
           - not_null
-          # Optional later: regex test once format confirmed
       - name: subscription_date
         tests:
           - not_null
-          - dbt_utils.not_accepted_values:
-              values: ['1900-01-01', '9999-12-31']
+          - dbt_utils.not_accepted_values:  # ← FIX DEPRECATION
+              arguments:  # ← ADD THIS LINE
+                values: ['1900-01-01', '9999-12-31']  # ← INDENT THIS
 
 
   - name: stg_products
@@ -59,9 +59,10 @@ models:
       - name: stock_qty
         tests:
           - not_null
-          - dbt_expectations.expect_column_values_to_be_greater_than_or_equal_to:
+          - dbt_expectations.expect_column_values_to_be_between:  # ← FIXED THIS LINE
               arguments:
-                value: 0
+                min_value: 0  # ← CHANGED FROM 'value' TO 'min_value'
+                max_value: 1000000
       - name: availability_status
         tests:
           - accepted_values: 
