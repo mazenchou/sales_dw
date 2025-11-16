@@ -5,12 +5,16 @@ models:
     description: "Customer retention cohorts by first order month."
     columns:
       - name: cohort_month
+        description: "First order month for the customer cohort"
         tests: [not_null]
       - name: months_since_cohort
+        description: "Number of months since the cohort started"
         tests: [not_null]
       - name: active_customers
+        description: "Number of active customers in this cohort/month"
         tests: [not_null]
       - name: retention_rate_pct
+        description: "Retention rate as percentage of original cohort"
         tests:
           - dbt_expectations.expect_column_values_to_be_between:
               arguments:
