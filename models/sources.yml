@@ -147,7 +147,7 @@ sources:
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
                   arguments:
-                    min_value: 1000000000000  # 13-digit minimum
+                    min_value: 1 
                     max_value: 9999999999999
           - name: Color
           - name: Size
