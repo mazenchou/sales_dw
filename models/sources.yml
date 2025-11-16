@@ -155,7 +155,7 @@ sources:
             tests:
               - accepted_values:
                   arguments:
-                    values: ['In Stock', 'Out of Stock', 'Pre-order', 'Limited Stock', 'Backorder']
+                    values: ['In Stock', 'Out of Stock', 'Pre-order', 'Limited Stock', 'Backorder', 'Discontinued', 'Unknown']
           - name: "`Internal ID`"
             description: "Internal SKU — may be duplicate if multi-variant"
             tests: [not_null]
