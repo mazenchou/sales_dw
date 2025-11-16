@@ -4,7 +4,7 @@ sources:
   - name: raw_customers
     description: "Raw customer data (seeded from CSV). Source of truth for B2C customers."
     database: dotted-hulling-477021-d2
-    schema: "dbt_test_staging"
+    schema: "raw_Staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 24, period: hour}
@@ -13,7 +13,7 @@ sources:
 
     tables:
       - name: customers
-        identifier: customers_100
+        identifier: "customers_100"
         description: "Individual customer records"
         columns:
           - name: index
@@ -57,7 +57,7 @@ sources:
   - name: raw_organizations
     description: "Raw B2B organization data (seeded from CSV). Used for account-based analytics."
     database: dotted-hulling-477021-d2
-    schema: "dbt_test_staging"
+    schema: "raw_Staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 48, period: hour}
@@ -66,7 +66,7 @@ sources:
 
     tables:
       - name: organizations
-        identifier: "`organizations-100`"
+        identifier: "organizations-100"
         description: "Business organization records"
         columns:
           - name: index
@@ -101,7 +101,7 @@ sources:
   - name: raw_products
     description: "Raw product catalog (seeded from CSV). Foundation for revenue & inventory analysis."
     database: dotted-hulling-477021-d2
-    schema: "dbt_test_staging"
+    schema: "raw_Staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 24, period: hour}
@@ -110,7 +110,7 @@ sources:
 
     tables:
       - name: products
-        identifier: "`products-100`"
+        identifier: "products-100"
         description: "Sellable product items"
         columns:
           - name: index

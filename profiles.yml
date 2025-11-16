@@ -1,13 +1,18 @@
 envquery:
+  target: dev
   outputs:
     dev:
-      dataset: dbt_test
-      job_execution_timeout_seconds: 300
-      job_retries: 1
-      location: EU
-      method: oauth
-      priority: interactive
-      project: dotted-hulling-477021-d2
-      threads: 4
       type: bigquery
-  target: dev
+      method: oauth
+      project: dotted-hulling-477021-d2
+      dataset: dbt_test        # ← your dev models
+      threads: 4
+      location: EU
+
+    raw:  # ← new target for seeds
+      type: bigquery
+      method: oauth
+      project: dotted-hulling-477021-d2
+      dataset: raw             # ← seeds land here
+      threads: 1
+      location: EU
