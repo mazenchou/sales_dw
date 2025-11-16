@@ -5,7 +5,8 @@ models:
     description: "Standardized customer records from customers_100.csv. Business key = `Customer Id`."
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns: ['customer_id']
+          arguments:
+            combination_of_columns: ['customer_id']
     columns:
       - name: customer_sk
         description: "Hash-based surrogate key (MD5 of `Customer Id`)"
@@ -23,16 +24,16 @@ models:
       - name: subscription_date
         tests:
           - not_null
-          - dbt_utils.not_accepted_values:  # ← FIX DEPRECATION
-              arguments:  # ← ADD THIS LINE
-                values: ['1900-01-01', '9999-12-31']  # ← INDENT THIS
-
+          - dbt_utils.not_accepted_values:
+              arguments:
+                values: ['1900-01-01', '9999-12-31']
 
   - name: stg_products
     description: "Standardized product catalog from products-100.csv."
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns: ['product_id']
+          arguments:
+            combination_of_columns: ['product_id']
     columns:
       - name: product_sk
         tests: 
@@ -76,7 +77,8 @@ models:
     description: "Standardized B2B organization records."
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns: ['organization_id']
+          arguments:
+            combination_of_columns: ['organization_id']
     columns:
       - name: organization_sk
         tests: [unique, not_null]

@@ -43,14 +43,16 @@ sources:
             tests:
               - not_null
               - dbt_expectations.expect_column_values_to_match_regex:
-                  regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+                  arguments:
+                    regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
           - name: subscription_date
             data_type: date
             description: "When customer subscribed (ISO 'YYYY-MM-DD')"
             tests:
               - not_null
-              - dbt_expectations.expect_column_values_to_be_in_future:
-                  threshold: false  # must be in past or today
+              - dbt_utils.expression_is_true:  # ← REPLACED: expect_column_values_to_be_in_future
+                  arguments:
+                    expression: "subscription_date <= current_date"  # must be in past or today
           - name: website
             description: "Personal or company website (nullable)"
 
@@ -88,15 +90,17 @@ sources:
             description: "Year founded (e.g., 2010)"
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
-                  min_value: 1800
-                  max_value: "{{ modules.datetime.datetime.now().year }}"
+                  arguments:
+                    min_value: 1800
+                    max_value: "{{ modules.datetime.datetime.now().year }}"
           - name: industry
           - name: number_of_employees
             data_type: int
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
-                  min_value: 1
-                  max_value: 1000000
+                  arguments:
+                    min_value: 1
+                    max_value: 1000000
           - name: products
 
 
@@ -129,28 +133,34 @@ sources:
             tests:
               - not_null
               - dbt_expectations.expect_column_values_to_be_between:
-                  min_value: 0.01
-                  max_value: 100000
+                  arguments:
+                    min_value: 0.01
+                    max_value: 100000
           - name: currency
             tests:
               - not_null
-              - accepted_values: {values: ['USD', 'EUR', 'GBP']}
+              - accepted_values: 
+                  values: ['USD', 'EUR', 'GBP']
           - name: stock
             data_type: int
             tests:
               - not_null
-              - dbt_expectations.expect_column_values_to_be_greater_than_or_equal_to:
-                  value: 0
+              - dbt_expectations.expect_column_values_to_be_between:  # ← REPLACED: expect_column_values_to_be_greater_than_or_equal_to
+                  arguments:
+                    min_value: 0
+                    max_value: 1000000
           - name: ean
             description: "European Article Number (13-digit barcode)"
             tests:
               - dbt_expectations.expect_column_values_to_match_regex:
-                  regex: '^\d{13}$'
+                  arguments:
+                    regex: '^\d{13}$'
           - name: color
           - name: size
           - name: availability
             tests:
-              - accepted_values: {values: ['In Stock', 'Out of Stock', 'Pre-order']}
+              - accepted_values: 
+                  values: ['In Stock', 'Out of Stock', 'Pre-order']
           - name: internal_id
             description: "Internal SKU — may be duplicate if multi-variant"
             tests: [not_null]

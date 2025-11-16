@@ -30,7 +30,14 @@ jobs:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - name: Install dbt packages
-        run: dbt deps --target dev
+        run: |
+          echo "Installing packages from packages.yml..."
+          dbt deps --target dev
+          echo "Installed packages:"
+          ls -la dbt_packages/
+          # Fail if packages missing
+          test -d dbt_packages/dbt_utils
+          test -d dbt_packages/dbt_expectations
 
       - name: Clean install dbt packages
         run: |
