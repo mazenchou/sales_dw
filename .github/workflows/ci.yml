@@ -31,23 +31,23 @@ jobs:
 
       - name: Install dbt packages
         run: |
-          dbt deps --target dev
+          dbt deps --target raw
 
       - name: dbt debug
-        run: dbt debug --target dev
+        run: dbt debug --target raw
 
       - name: dbt compile (syntax check)
-        run: dbt compile --target dev
+        run: dbt compile --target raw
 
       # ADD THIS CRITICAL STEP
       - name: Load seed data
-        run: dbt seed --target dev
+        run: dbt seed --target raw
 
       - name: dbt build (run + test)
-        run: dbt build --target dev --fail-fast
+        run: dbt build --target raw --fail-fast
 
       - name: Generate docs
-        run: dbt docs generate --target dev
+        run: dbt docs generate --target raw
 
       - name: Upload docs artifact (optional)
         uses: actions/upload-artifact@v4
