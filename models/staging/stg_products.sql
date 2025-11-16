@@ -66,6 +66,7 @@ renamed as (
         current_timestamp() as load_timestamp,
         '{{ invocation_id }}' as dbt_invocation_id
     from source
+    group by `Internal ID`
 )
 
 select * from renamed
