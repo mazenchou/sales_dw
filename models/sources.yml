@@ -4,7 +4,7 @@ sources:
   - name: raw_customers
     description: "Raw customer data (seeded from CSV). Source of truth for B2C customers."
     database: dotted-hulling-477021-d2
-    schema: "dbt_test_staging"  # Changed to existing dataset
+    schema: "dbt_test_staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 24, period: hour}
@@ -42,24 +42,22 @@ sources:
           - name: email
             tests:
               - not_null
-          - dbt_expectations.expect_column_values_to_match_regex:
-              arguments:
-                regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'
+              - dbt_expectations.expect_column_values_to_match_regex:
+                  regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
           - name: subscription_date
             data_type: date
             description: "When customer subscribed (ISO 'YYYY-MM-DD')"
             tests:
               - not_null
               - dbt_utils.expression_is_true:
-                  arguments:
-                    expression: "subscription_date <= current_date"
+                  expression: "subscription_date <= current_date"
           - name: website
             description: "Personal or company website (nullable)"
 
   - name: raw_organizations
     description: "Raw B2B organization data (seeded from CSV). Used for account-based analytics."
     database: dotted-hulling-477021-d2
-    schema: "dbt_test_staging"  # Changed to existing dataset
+    schema: "dbt_test_staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 48, period: hour}
@@ -89,30 +87,27 @@ sources:
             description: "Year founded (e.g., 2010)"
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 1800
-                    max_value: "{{ modules.datetime.datetime.now().year }}"
+                  min_value: 1800
+                  max_value: "{{ modules.datetime.datetime.now().year }}"
           - name: industry
           - name: number_of_employees
             data_type: int
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 1
-                    max_value: 1000000
+                  min_value: 1
+                  max_value: 1000000
           - name: products
 
   - name: raw_products
     description: "Raw product catalog (seeded from CSV). Foundation for revenue & inventory analysis."
     database: dotted-hulling-477021-d2
-    schema: "dbt_test_staging"  # Changed to existing dataset
+    schema: "dbt_test_staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 24, period: hour}
       error_after: {count: 168, period: hour}
     loaded_at_field: _uploaded_at
 
-    # In raw_products table - FIX COLUMN NAMES:
     tables:
       - name: products
         identifier: products
@@ -132,36 +127,31 @@ sources:
             tests:
               - not_null
               - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 0.01
-                    max_value: 100000
+                  min_value: 0.01
+                  max_value: 100000
           - name: currency
             tests:
               - not_null
               - accepted_values:
-                  arguments:
-                    values: ['USD', 'EUR', 'GBP']
-          - name: Stock  # ← CHANGED FROM 'stock' TO 'Stock'
+                  values: ['USD', 'EUR', 'GBP']
+          - name: Stock
             data_type: int
             tests:
               - not_null
               - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 0
-                    max_value: 1000000
+                  min_value: 0
+                  max_value: 1000000
           - name: ean
             description: "European Article Number (13-digit barcode)"
             tests:
               - dbt_expectations.expect_column_values_to_match_regex:
-                  arguments:
-                    regex: '^[0-9]{13}$'
+                  regex: '^[0-9]{13}$'
           - name: color
           - name: size
           - name: availability
             tests:
               - accepted_values:
-                  arguments:
-                    values: ['In Stock', 'Out of Stock', 'Pre-order']
+                  values: ['In Stock', 'Out of Stock', 'Pre-order']
           - name: internal_id
             description: "Internal SKU — may be duplicate if multi-variant"
             tests: [not_null]
