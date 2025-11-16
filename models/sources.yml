@@ -13,7 +13,7 @@ sources:
 
     tables:
       - name: customers
-        identifier: clients
+        identifier: customers_100
         description: "Individual customer records"
         columns:
           - name: index
@@ -50,7 +50,7 @@ sources:
             tests:
               - not_null
               - dbt_utils.expression_is_true:
-                  expression: "subscription_date <= current_date"
+                  expression: "subscription_date <= current_date()"
           - name: website
             description: "Personal or company website (nullable)"
 
@@ -66,7 +66,7 @@ sources:
 
     tables:
       - name: organizations
-        identifier: orgs
+        identifier: organizations-100
         description: "Business organization records"
         columns:
           - name: index
@@ -83,15 +83,15 @@ sources:
             tests: [not_null]
           - name: description
           - name: founded
-            data_type: int
+            data_type: int64
             description: "Year founded (e.g., 2010)"
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
                   min_value: 1800
-                  max_value: "{{ modules.datetime.datetime.now().year }}"
+                  max_value: 2025
           - name: industry
           - name: number_of_employees
-            data_type: int
+            data_type: int64
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
                   min_value: 1
@@ -110,7 +110,7 @@ sources:
 
     tables:
       - name: products
-        identifier: products
+        identifier: products-100
         description: "Sellable product items"
         columns:
           - name: index
@@ -135,7 +135,7 @@ sources:
               - accepted_values:
                   values: ['USD', 'EUR', 'GBP']
           - name: Stock
-            data_type: int
+            data_type: int64
             tests:
               - not_null
               - dbt_expectations.expect_column_values_to_be_between:
