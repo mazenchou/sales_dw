@@ -19207,3 +19207,1300 @@ parsing.
 [0m19:21:44.415250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A126C9C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A127CEA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A12A18B10>]}
 [0m19:21:44.415250 [debug] [MainThread]: Flushing usage events
 [0m19:21:45.786561 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:37:29.132186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022739D0A010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022739D09BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022739D09950>]}
+
+
+============================== 10:37:29.142749 | 4a618563-5877-4a2b-a638-96790943da2e ==============================
+[0m10:37:29.142749 [info ] [MainThread]: Running with dbt=1.10.13
+[0m10:37:29.143736 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'invocation_command': 'dbt run -s customer_cohorts', 'target_path': 'None', 'printer_width': '80', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m10:37:55.564780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4a618563-5877-4a2b-a638-96790943da2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022756E2AAD0>]}
+[0m10:37:55.687899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4a618563-5877-4a2b-a638-96790943da2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227366F0410>]}
+[0m10:37:55.689900 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m10:37:57.263423 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m10:37:57.794177 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:37:57.795178 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:37:57.879810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4a618563-5877-4a2b-a638-96790943da2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022757383450>]}
+[0m10:37:58.110086 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:37:58.117973 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:37:58.242679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4a618563-5877-4a2b-a638-96790943da2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022757577BD0>]}
+[0m10:37:58.243676 [info ] [MainThread]: Found 10 models, 3 seeds, 97 data tests, 3 sources, 891 macros
+[0m10:37:58.243676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4a618563-5877-4a2b-a638-96790943da2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227577D5750>]}
+[0m10:37:58.248207 [info ] [MainThread]: 
+[0m10:37:58.249210 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:37:58.250205 [info ] [MainThread]: 
+[0m10:37:58.251211 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:37:58.254983 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2'
+[0m10:37:58.256343 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:38:09.891224 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2, now create_dotted-hulling-477021-d2_dbt_test_marts_retention)
+[0m10:38:09.893235 [debug] [ThreadPool]: Creating schema "database: "dotted-hulling-477021-d2"
+schema: "dbt_test_marts_retention"
+"
+[0m10:38:09.923810 [debug] [ThreadPool]: On create_dotted-hulling-477021-d2_dbt_test_marts_retention: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "connection_name": "create_dotted-hulling-477021-d2_dbt_test_marts_retention"} */
+create schema if not exists `dotted-hulling-477021-d2`.`dbt_test_marts_retention`
+  
+[0m10:38:09.925342 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:38:11.202265 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:ef6c9136-214b-4b40-87f3-180a220d8d1b&page=queryresults
+[0m10:38:18.727753 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_core'
+[0m10:38:18.729753 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:38:18.730754 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test'
+[0m10:38:18.732756 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_staging'
+[0m10:38:18.737726 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention'
+[0m10:38:18.739723 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:38:18.741721 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:38:18.743722 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:38:20.632019 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2_dbt_test_staging, now list_dotted-hulling-477021-d2_dbt_test_marts_sales)
+[0m10:38:20.643169 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:38:22.376836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4a618563-5877-4a2b-a638-96790943da2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022757602410>]}
+[0m10:38:22.378831 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:38:22.419590 [debug] [Thread-1 (]: Began running node model.envquery.customer_cohorts
+[0m10:38:22.422585 [info ] [Thread-1 (]: 1 of 1 START sql table model dbt_test_marts_retention.customer_cohorts ......... [RUN]
+[0m10:38:22.425908 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.envquery.customer_cohorts'
+[0m10:38:22.427923 [debug] [Thread-1 (]: Began compiling node model.envquery.customer_cohorts
+[0m10:38:22.470013 [debug] [Thread-1 (]: Writing injected SQL for node "model.envquery.customer_cohorts"
+[0m10:38:22.475984 [debug] [Thread-1 (]: Began executing node model.envquery.customer_cohorts
+[0m10:38:22.624181 [debug] [Thread-1 (]: Writing runtime sql for node "model.envquery.customer_cohorts"
+[0m10:38:22.630545 [debug] [Thread-1 (]: On model.envquery.customer_cohorts: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "model.envquery.customer_cohorts"} */
+
+  
+    
+
+    create or replace table `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+with first_orders as (
+    select
+        customer_sk,
+        min(date_trunc(order_date, month)) as cohort_month
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+    where order_date is not null
+    group by 1
+),
+
+monthly_activity as (
+    select
+        customer_sk,
+        date_trunc(order_date, month) as activity_month
+    from `dotted-hulling-477021-d2`.`dbt_test_core`.`fct_orders`
+    where order_date is not null
+    group by 1, 2
+),
+
+cohorts as (
+    select
+        fo.cohort_month,
+        ma.activity_month,
+        fo.customer_sk
+    from first_orders fo
+    inner join monthly_activity ma
+        on fo.customer_sk = ma.customer_sk
+        and ma.activity_month >= fo.cohort_month
+)
+
+select
+    cohort_month,
+    activity_month,
+    date_diff(activity_month, cohort_month, month) as months_since_cohort,
+    count(distinct customer_sk) as active_customers,
+    round(
+        count(distinct customer_sk) * 100.0 /
+        first_value(count(distinct customer_sk)) over (
+            partition by cohort_month
+            order by activity_month
+        ),
+        1
+    ) as retention_rate_pct
+from cohorts
+group by 1, 2, 3
+order by 1, 2
+    );
+  
+[0m10:38:22.632677 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:38:25.232303 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:020f4237-13a4-4f65-924b-44531178c8f7&page=queryresults
+[0m10:38:27.750917 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4a618563-5877-4a2b-a638-96790943da2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022756CB8FD0>]}
+[0m10:38:27.752916 [info ] [Thread-1 (]: 1 of 1 OK created sql table model dbt_test_marts_retention.customer_cohorts .... [[32mCREATE TABLE (28.0 rows, 30.9 KiB processed)[0m in 5.30s]
+[0m10:38:27.754915 [debug] [Thread-1 (]: Finished running node model.envquery.customer_cohorts
+[0m10:38:27.758495 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:38:27.759507 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:38:27.760508 [debug] [MainThread]: Connection 'create_dotted-hulling-477021-d2_dbt_test_marts_retention' was properly closed.
+[0m10:38:27.761506 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_core' was properly closed.
+[0m10:38:27.762509 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test' was properly closed.
+[0m10:38:27.763506 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales' was properly closed.
+[0m10:38:27.765015 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention' was properly closed.
+[0m10:38:27.766135 [debug] [MainThread]: Connection 'model.envquery.customer_cohorts' was properly closed.
+[0m10:38:27.768141 [info ] [MainThread]: 
+[0m10:38:27.769141 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 29.52 seconds (29.52s).
+[0m10:38:27.771144 [debug] [MainThread]: Command end result
+[0m10:38:27.963754 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:38:27.973852 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:38:28.012692 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\eki\Desktop\fsg\target\run_results.json
+[0m10:38:28.013690 [info ] [MainThread]: 
+[0m10:38:28.015197 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:38:28.017490 [info ] [MainThread]: 
+[0m10:38:28.019581 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:38:28.022821 [debug] [MainThread]: Command `dbt run` succeeded at 10:38:28.022821 after 59.07 seconds
+[0m10:38:28.024820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022739D8AE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227330BEED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227330BEE10>]}
+[0m10:38:28.026337 [debug] [MainThread]: Flushing usage events
+[0m10:38:30.177627 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:42:22.471035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017305C49790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017305C85E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017305C853D0>]}
+
+
+============================== 10:42:22.481784 | 9457412a-24a7-4c9f-b43c-729acf1eba16 ==============================
+[0m10:42:22.481784 [info ] [MainThread]: Running with dbt=1.10.13
+[0m10:42:22.482785 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'log_format': 'default', 'printer_width': '80', 'target_path': 'None', 'invocation_command': 'dbt test -s customer_cohorts', 'warn_error': 'None', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m10:42:34.589984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9457412a-24a7-4c9f-b43c-729acf1eba16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017322C70590>]}
+[0m10:42:34.814992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9457412a-24a7-4c9f-b43c-729acf1eba16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017302620690>]}
+[0m10:42:34.817175 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m10:42:37.657337 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m10:42:38.649204 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:42:38.651202 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:42:38.855891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9457412a-24a7-4c9f-b43c-729acf1eba16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173234A8ED0>]}
+[0m10:42:39.295466 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:42:39.303362 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:42:39.453911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9457412a-24a7-4c9f-b43c-729acf1eba16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173232B31D0>]}
+[0m10:42:39.455003 [info ] [MainThread]: Found 10 models, 3 seeds, 97 data tests, 3 sources, 891 macros
+[0m10:42:39.456315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9457412a-24a7-4c9f-b43c-729acf1eba16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017323468F90>]}
+[0m10:42:39.462227 [info ] [MainThread]: 
+[0m10:42:39.463226 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:42:39.465227 [info ] [MainThread]: 
+[0m10:42:39.467568 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:42:39.482880 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_staging'
+[0m10:42:39.483880 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:42:39.485043 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_core'
+[0m10:42:39.486123 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention'
+[0m10:42:39.487124 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:42:39.489124 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test'
+[0m10:42:39.490123 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:42:39.492254 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:42:48.366747 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2_dbt_test_marts_retention, now list_dotted-hulling-477021-d2_dbt_test_marts_sales)
+[0m10:42:48.368746 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:42:49.945533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9457412a-24a7-4c9f-b43c-729acf1eba16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017322C18610>]}
+[0m10:42:49.946744 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:42:49.973423 [debug] [Thread-1 (]: Began running node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:42:49.974416 [debug] [Thread-2 (]: Began running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:42:49.976418 [debug] [Thread-3 (]: Began running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:42:49.977419 [debug] [Thread-4 (]: Began running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:42:49.979432 [info ] [Thread-1 (]: 1 of 4 START test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0  [RUN]
+[0m10:42:49.981416 [info ] [Thread-2 (]: 2 of 4 START test not_null_customer_cohorts_active_customers ................... [RUN]
+[0m10:42:49.983951 [info ] [Thread-3 (]: 3 of 4 START test not_null_customer_cohorts_cohort_month ....................... [RUN]
+[0m10:42:49.985950 [info ] [Thread-4 (]: 4 of 4 START test not_null_customer_cohorts_months_since_cohort ................ [RUN]
+[0m10:42:49.988951 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856'
+[0m10:42:49.992949 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7'
+[0m10:42:49.995952 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599'
+[0m10:42:49.997954 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50'
+[0m10:42:50.000954 [debug] [Thread-1 (]: Began compiling node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:42:50.002949 [debug] [Thread-2 (]: Began compiling node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:42:50.004949 [debug] [Thread-3 (]: Began compiling node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:42:50.009258 [debug] [Thread-4 (]: Began compiling node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:42:50.101323 [debug] [Thread-1 (]: Writing injected SQL for node "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"
+[0m10:42:50.126502 [debug] [Thread-2 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:42:50.140784 [debug] [Thread-3 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:42:50.151180 [debug] [Thread-4 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:42:50.155181 [debug] [Thread-2 (]: Began executing node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:42:50.156181 [debug] [Thread-1 (]: Began executing node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:42:50.156181 [debug] [Thread-3 (]: Began executing node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:42:50.214691 [debug] [Thread-2 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:42:50.215690 [debug] [Thread-4 (]: Began executing node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:42:50.220844 [debug] [Thread-1 (]: Writing runtime sql for node "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"
+[0m10:42:50.226948 [debug] [Thread-3 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:42:50.233082 [debug] [Thread-4 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:42:50.235087 [debug] [Thread-2 (]: On test.envquery.not_null_customer_cohorts_active_customers.144d6507f7: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select active_customers
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where active_customers is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:42:50.236082 [debug] [Thread-1 (]: On test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+
+where not(retention_rate_pct retention_rate_pct >= 0)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:42:50.237083 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:42:50.238087 [debug] [Thread-3 (]: On test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cohort_month
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where cohort_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:42:50.239086 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:42:50.239086 [debug] [Thread-4 (]: On test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select months_since_cohort
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where months_since_cohort is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:42:50.242104 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:42:50.246102 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:42:51.985256 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:9a5bd2ea-efe1-4bbe-8bba-73a6cdbe80b9&page=queryresults
+[0m10:42:51.987256 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:9a5bd2ea-efe1-4bbe-8bba-73a6cdbe80b9&page=queryresults
+[0m10:42:52.271055 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:16bbb5de-4d87-4592-a778-f3a117b0cfc9&page=queryresults
+[0m10:42:52.282054 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:5668d5dd-5362-498f-a623-639021a35963&page=queryresults
+[0m10:42:52.284570 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:0325efc7-24e8-446b-9697-6ce9941e704a&page=queryresults
+[0m10:42:52.317254 [debug] [Thread-1 (]: Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:42:52.319261 [error] [Thread-1 (]: 1 of 4 ERROR dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0  [[31mERROR[0m in 2.33s]
+[0m10:42:52.322253 [debug] [Thread-1 (]: Finished running node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:42:52.325253 [debug] [Thread-7 (]: Marking all children of 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856' to be skipped because of status 'error'.  Reason: Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql.
+[0m10:42:53.230615 [info ] [Thread-2 (]: 2 of 4 PASS not_null_customer_cohorts_active_customers ......................... [[32mPASS[0m in 3.24s]
+[0m10:42:53.241605 [debug] [Thread-2 (]: Finished running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:42:53.238603 [info ] [Thread-4 (]: 4 of 4 PASS not_null_customer_cohorts_months_since_cohort ...................... [[32mPASS[0m in 3.24s]
+[0m10:42:53.250605 [info ] [Thread-3 (]: 3 of 4 PASS not_null_customer_cohorts_cohort_month ............................. [[32mPASS[0m in 3.25s]
+[0m10:42:53.254609 [debug] [Thread-4 (]: Finished running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:42:53.258608 [debug] [Thread-3 (]: Finished running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:42:53.266138 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:42:53.268149 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:42:53.269195 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_staging' was properly closed.
+[0m10:42:53.271592 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_core' was properly closed.
+[0m10:42:53.273582 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales' was properly closed.
+[0m10:42:53.275587 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test' was properly closed.
+[0m10:42:53.277582 [debug] [MainThread]: Connection 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856' was properly closed.
+[0m10:42:53.279580 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7' was properly closed.
+[0m10:42:53.281595 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599' was properly closed.
+[0m10:42:53.283585 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50' was properly closed.
+[0m10:42:53.285471 [info ] [MainThread]: 
+[0m10:42:53.287514 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 13.82 seconds (13.82s).
+[0m10:42:53.293511 [debug] [MainThread]: Command end result
+[0m10:42:53.534664 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:42:53.543977 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:42:53.570972 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\eki\Desktop\fsg\target\run_results.json
+[0m10:42:53.572993 [info ] [MainThread]: 
+[0m10:42:53.575994 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:42:53.576994 [info ] [MainThread]: 
+[0m10:42:53.579995 [error] [MainThread]: [31mFailure in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)[0m
+[0m10:42:53.582998 [error] [MainThread]:   Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:42:53.585993 [info ] [MainThread]: 
+[0m10:42:53.588126 [info ] [MainThread]:   compiled code at target\compiled\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:42:53.591268 [info ] [MainThread]: 
+[0m10:42:53.593267 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m10:42:53.596267 [debug] [MainThread]: Command `dbt test` failed at 10:42:53.595266 after 31.27 seconds
+[0m10:42:53.598266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017305CB2690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017305CB1150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000173048AB950>]}
+[0m10:42:53.600264 [debug] [MainThread]: Flushing usage events
+[0m10:42:55.570286 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:53:29.470119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246CB546F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246CB5AB710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246CB5AB190>]}
+
+
+============================== 10:53:29.480116 | 054653e7-7fae-4881-ac87-e69263542594 ==============================
+[0m10:53:29.480116 [info ] [MainThread]: Running with dbt=1.10.13
+[0m10:53:29.482107 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'printer_width': '80', 'log_format': 'default', 'target_path': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt test -s customer_cohorts', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m10:53:52.922848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '054653e7-7fae-4881-ac87-e69263542594', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E85EE850>]}
+[0m10:53:53.003009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '054653e7-7fae-4881-ac87-e69263542594', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246C7F40290>]}
+[0m10:53:53.004010 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m10:53:54.961406 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m10:53:55.298596 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:53:55.299596 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:53:55.368312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '054653e7-7fae-4881-ac87-e69263542594', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E85F5ED0>]}
+[0m10:53:55.525517 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:53:55.529628 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:53:55.691529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '054653e7-7fae-4881-ac87-e69263542594', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E8E4DD90>]}
+[0m10:53:55.694520 [info ] [MainThread]: Found 10 models, 3 seeds, 97 data tests, 3 sources, 891 macros
+[0m10:53:55.697520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '054653e7-7fae-4881-ac87-e69263542594', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E85F5550>]}
+[0m10:53:55.704523 [info ] [MainThread]: 
+[0m10:53:55.706521 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:53:55.708618 [info ] [MainThread]: 
+[0m10:53:55.712599 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:53:55.732009 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_staging'
+[0m10:53:55.733010 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:53:55.734008 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention'
+[0m10:53:55.735044 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_core'
+[0m10:53:55.736303 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales'
+[0m10:53:55.737686 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:53:55.738687 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:53:55.739688 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:54:05.279661 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2_dbt_test_marts_sales, now list_dotted-hulling-477021-d2_dbt_test)
+[0m10:54:05.298350 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:54:06.499070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '054653e7-7fae-4881-ac87-e69263542594', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E86A94D0>]}
+[0m10:54:06.500068 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:54:06.516860 [debug] [Thread-1 (]: Began running node test.envquery.accepted_range_customer_cohorts_retention_rate_pct__True__0.4c3864e9e1
+[0m10:54:06.518048 [debug] [Thread-2 (]: Began running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:54:06.518048 [debug] [Thread-3 (]: Began running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:54:06.519440 [debug] [Thread-4 (]: Began running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:54:06.519440 [info ] [Thread-1 (]: 1 of 4 START test accepted_range_customer_cohorts_retention_rate_pct__True__0 .. [RUN]
+[0m10:54:06.520690 [info ] [Thread-2 (]: 2 of 4 START test not_null_customer_cohorts_active_customers ................... [RUN]
+[0m10:54:06.522096 [info ] [Thread-3 (]: 3 of 4 START test not_null_customer_cohorts_cohort_month ....................... [RUN]
+[0m10:54:06.523095 [info ] [Thread-4 (]: 4 of 4 START test not_null_customer_cohorts_months_since_cohort ................ [RUN]
+[0m10:54:06.524097 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.envquery.accepted_range_customer_cohorts_retention_rate_pct__True__0.4c3864e9e1'
+[0m10:54:06.526243 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7'
+[0m10:54:06.529243 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599'
+[0m10:54:06.530242 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50'
+[0m10:54:06.531243 [debug] [Thread-1 (]: Began compiling node test.envquery.accepted_range_customer_cohorts_retention_rate_pct__True__0.4c3864e9e1
+[0m10:54:06.532247 [debug] [Thread-2 (]: Began compiling node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:54:06.533243 [debug] [Thread-3 (]: Began compiling node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:54:06.533243 [debug] [Thread-4 (]: Began compiling node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:54:06.576221 [debug] [Thread-2 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:54:06.585007 [debug] [Thread-3 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:54:06.586033 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:54:06.592721 [debug] [Thread-4 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:54:06.596899 [debug] [Thread-2 (]: Began executing node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:54:06.597941 [debug] [Thread-3 (]: Began executing node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:54:06.598939 [debug] [Thread-4 (]: Began executing node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:54:06.626600 [debug] [Thread-2 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:54:06.631620 [debug] [Thread-3 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:54:06.636620 [debug] [Thread-4 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:54:06.638622 [debug] [Thread-2 (]: On test.envquery.not_null_customer_cohorts_active_customers.144d6507f7: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select active_customers
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where active_customers is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:54:06.640130 [debug] [Thread-4 (]: On test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select months_since_cohort
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where months_since_cohort is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:54:06.641139 [debug] [Thread-3 (]: On test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cohort_month
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where cohort_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:54:06.641139 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:54:06.643141 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:54:06.644139 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:54:06.753112 [debug] [Thread-1 (]: Compilation Error in test accepted_range_customer_cohorts_retention_rate_pct__True__0 (models\marts\retention\schema.yml)
+  'test_accepted_range' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:54:06.754110 [error] [Thread-1 (]: 1 of 4 ERROR accepted_range_customer_cohorts_retention_rate_pct__True__0 ....... [[31mERROR[0m in 0.23s]
+[0m10:54:06.755110 [debug] [Thread-1 (]: Finished running node test.envquery.accepted_range_customer_cohorts_retention_rate_pct__True__0.4c3864e9e1
+[0m10:54:06.756572 [debug] [Thread-7 (]: Marking all children of 'test.envquery.accepted_range_customer_cohorts_retention_rate_pct__True__0.4c3864e9e1' to be skipped because of status 'error'.  Reason: Compilation Error in test accepted_range_customer_cohorts_retention_rate_pct__True__0 (models\marts\retention\schema.yml)
+  'test_accepted_range' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m10:54:07.934654 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:72714f1a-8467-4c0b-86c6-910c24dd8e62&page=queryresults
+[0m10:54:07.935645 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:cb83f3f8-ba04-4519-a20a-7f12eade7807&page=queryresults
+[0m10:54:07.986549 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:5b735255-a643-4a03-ba6d-9fe763cf0748&page=queryresults
+[0m10:54:15.268091 [info ] [Thread-4 (]: 4 of 4 PASS not_null_customer_cohorts_months_since_cohort ...................... [[32mPASS[0m in 8.74s]
+[0m10:54:15.274090 [info ] [Thread-3 (]: 3 of 4 PASS not_null_customer_cohorts_cohort_month ............................. [[32mPASS[0m in 8.75s]
+[0m10:54:15.276328 [debug] [Thread-4 (]: Finished running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:54:15.279327 [debug] [Thread-3 (]: Finished running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:54:15.291475 [info ] [Thread-2 (]: 2 of 4 PASS not_null_customer_cohorts_active_customers ......................... [[32mPASS[0m in 8.77s]
+[0m10:54:15.294857 [debug] [Thread-2 (]: Finished running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:54:15.299419 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:54:15.301419 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:54:15.302431 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_staging' was properly closed.
+[0m10:54:15.303419 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention' was properly closed.
+[0m10:54:15.305415 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_core' was properly closed.
+[0m10:54:15.306472 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test' was properly closed.
+[0m10:54:15.307502 [debug] [MainThread]: Connection 'test.envquery.accepted_range_customer_cohorts_retention_rate_pct__True__0.4c3864e9e1' was properly closed.
+[0m10:54:15.308504 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7' was properly closed.
+[0m10:54:15.310507 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599' was properly closed.
+[0m10:54:15.311505 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50' was properly closed.
+[0m10:54:15.312851 [info ] [MainThread]: 
+[0m10:54:15.314865 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 19.60 seconds (19.60s).
+[0m10:54:15.319792 [debug] [MainThread]: Command end result
+[0m10:54:15.460819 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:54:15.464819 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:54:15.477223 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\eki\Desktop\fsg\target\run_results.json
+[0m10:54:15.478223 [info ] [MainThread]: 
+[0m10:54:15.479224 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:54:15.480225 [info ] [MainThread]: 
+[0m10:54:15.481224 [error] [MainThread]: [31mFailure in test accepted_range_customer_cohorts_retention_rate_pct__True__0 (models\marts\retention\schema.yml)[0m
+[0m10:54:15.482239 [error] [MainThread]:   Compilation Error in test accepted_range_customer_cohorts_retention_rate_pct__True__0 (models\marts\retention\schema.yml)
+  'test_accepted_range' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:54:15.483227 [info ] [MainThread]: 
+[0m10:54:15.484232 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m10:54:15.486224 [debug] [MainThread]: Command `dbt test` failed at 10:54:15.486224 after 46.24 seconds
+[0m10:54:15.487492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246CB53E810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246CA1AB6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246C4B28C50>]}
+[0m10:54:15.488510 [debug] [MainThread]: Flushing usage events
+[0m10:54:16.835329 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:54:58.999551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D51C359650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D51C395990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D51C395350>]}
+
+
+============================== 10:54:59.010553 | a09d1ebe-157a-4a51-be02-03acead02d0b ==============================
+[0m10:54:59.010553 [info ] [MainThread]: Running with dbt=1.10.13
+[0m10:54:59.012552 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'target_path': 'None', 'printer_width': '80', 'no_print': 'None', 'invocation_command': 'dbt test -s customer_cohorts', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m10:55:05.873981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a09d1ebe-157a-4a51-be02-03acead02d0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D539403510>]}
+[0m10:55:05.951894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a09d1ebe-157a-4a51-be02-03acead02d0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D518D30590>]}
+[0m10:55:05.952896 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m10:55:07.012454 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m10:55:07.418427 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:55:07.419397 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:55:07.536867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a09d1ebe-157a-4a51-be02-03acead02d0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D539C3FCD0>]}
+[0m10:55:07.703482 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:55:07.708472 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:55:07.774393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a09d1ebe-157a-4a51-be02-03acead02d0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D539C5CF50>]}
+[0m10:55:07.775391 [info ] [MainThread]: Found 10 models, 3 seeds, 97 data tests, 3 sources, 891 macros
+[0m10:55:07.776392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a09d1ebe-157a-4a51-be02-03acead02d0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D539811D10>]}
+[0m10:55:07.780419 [info ] [MainThread]: 
+[0m10:55:07.781415 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:55:07.782416 [info ] [MainThread]: 
+[0m10:55:07.784503 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:55:07.792970 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_staging'
+[0m10:55:07.794978 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test'
+[0m10:55:07.794978 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:55:07.796977 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention'
+[0m10:55:07.797979 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:55:07.799021 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_core'
+[0m10:55:07.800021 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:55:07.801393 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:55:13.180890 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2_dbt_test_marts_retention, now list_dotted-hulling-477021-d2_dbt_test_marts_sales)
+[0m10:55:13.182905 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:55:14.086760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a09d1ebe-157a-4a51-be02-03acead02d0b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D5394671D0>]}
+[0m10:55:14.088764 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:55:14.099786 [debug] [Thread-1 (]: Began running node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:55:14.100783 [debug] [Thread-2 (]: Began running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:55:14.101789 [debug] [Thread-3 (]: Began running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:55:14.102789 [debug] [Thread-4 (]: Began running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:55:14.103796 [info ] [Thread-1 (]: 1 of 4 START test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0  [RUN]
+[0m10:55:14.104780 [info ] [Thread-2 (]: 2 of 4 START test not_null_customer_cohorts_active_customers ................... [RUN]
+[0m10:55:14.105779 [info ] [Thread-3 (]: 3 of 4 START test not_null_customer_cohorts_cohort_month ....................... [RUN]
+[0m10:55:14.107785 [info ] [Thread-4 (]: 4 of 4 START test not_null_customer_cohorts_months_since_cohort ................ [RUN]
+[0m10:55:14.108782 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856'
+[0m10:55:14.109786 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7'
+[0m10:55:14.111216 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599'
+[0m10:55:14.112727 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50'
+[0m10:55:14.113738 [debug] [Thread-1 (]: Began compiling node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:55:14.113738 [debug] [Thread-2 (]: Began compiling node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:55:14.114743 [debug] [Thread-3 (]: Began compiling node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:55:14.114743 [debug] [Thread-4 (]: Began compiling node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:55:14.145246 [debug] [Thread-1 (]: Writing injected SQL for node "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"
+[0m10:55:14.156295 [debug] [Thread-2 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:55:14.163297 [debug] [Thread-3 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:55:14.169331 [debug] [Thread-4 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:55:14.171329 [debug] [Thread-1 (]: Began executing node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:55:14.172358 [debug] [Thread-2 (]: Began executing node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:55:14.189360 [debug] [Thread-3 (]: Began executing node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:55:14.198579 [debug] [Thread-1 (]: Writing runtime sql for node "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"
+[0m10:55:14.201581 [debug] [Thread-2 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:55:14.202582 [debug] [Thread-4 (]: Began executing node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:55:14.207576 [debug] [Thread-3 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:55:14.213083 [debug] [Thread-4 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:55:14.214090 [debug] [Thread-1 (]: On test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+
+where not(retention_rate_pct retention_rate_pct >= 0)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:55:14.215093 [debug] [Thread-2 (]: On test.envquery.not_null_customer_cohorts_active_customers.144d6507f7: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select active_customers
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where active_customers is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:55:14.216091 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:55:14.217090 [debug] [Thread-3 (]: On test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cohort_month
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where cohort_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:55:14.217090 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:55:14.218090 [debug] [Thread-4 (]: On test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select months_since_cohort
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where months_since_cohort is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:55:14.220281 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:55:14.223504 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:55:15.417723 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:108da8d5-289f-421f-98c1-548c92246f64&page=queryresults
+[0m10:55:15.419723 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:108da8d5-289f-421f-98c1-548c92246f64&page=queryresults
+[0m10:55:15.598232 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:d4a7c4b1-def4-4a66-ac96-fcdc8434fa7e&page=queryresults
+[0m10:55:15.603798 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:fcf05fea-24dc-46cb-b4dd-76ce0b24e24e&page=queryresults
+[0m10:55:15.632730 [debug] [Thread-1 (]: Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:55:15.634805 [error] [Thread-1 (]: 1 of 4 ERROR dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0  [[31mERROR[0m in 1.53s]
+[0m10:55:15.638002 [debug] [Thread-1 (]: Finished running node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:55:15.639030 [debug] [Thread-7 (]: Marking all children of 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856' to be skipped because of status 'error'.  Reason: Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql.
+[0m10:55:15.744367 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:bb3d1837-824c-44ca-9e09-2fd181760fe5&page=queryresults
+[0m10:55:16.246461 [info ] [Thread-4 (]: 4 of 4 PASS not_null_customer_cohorts_months_since_cohort ...................... [[32mPASS[0m in 2.13s]
+[0m10:55:16.248943 [debug] [Thread-4 (]: Finished running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:55:16.255066 [info ] [Thread-3 (]: 3 of 4 PASS not_null_customer_cohorts_cohort_month ............................. [[32mPASS[0m in 2.14s]
+[0m10:55:16.258066 [debug] [Thread-3 (]: Finished running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:55:16.279537 [info ] [Thread-2 (]: 2 of 4 PASS not_null_customer_cohorts_active_customers ......................... [[32mPASS[0m in 2.17s]
+[0m10:55:16.282527 [debug] [Thread-2 (]: Finished running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:55:16.285683 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:55:16.287684 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:55:16.288687 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_staging' was properly closed.
+[0m10:55:16.289687 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test' was properly closed.
+[0m10:55:16.291694 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales' was properly closed.
+[0m10:55:16.293683 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_core' was properly closed.
+[0m10:55:16.294686 [debug] [MainThread]: Connection 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856' was properly closed.
+[0m10:55:16.296685 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7' was properly closed.
+[0m10:55:16.297684 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599' was properly closed.
+[0m10:55:16.299686 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50' was properly closed.
+[0m10:55:16.300701 [info ] [MainThread]: 
+[0m10:55:16.302702 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 8.52 seconds (8.52s).
+[0m10:55:16.306706 [debug] [MainThread]: Command end result
+[0m10:55:16.452567 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:55:16.458575 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:55:16.472454 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\eki\Desktop\fsg\target\run_results.json
+[0m10:55:16.473454 [info ] [MainThread]: 
+[0m10:55:16.474944 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:55:16.476942 [info ] [MainThread]: 
+[0m10:55:16.477943 [error] [MainThread]: [31mFailure in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)[0m
+[0m10:55:16.478941 [error] [MainThread]:   Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:55:16.480943 [info ] [MainThread]: 
+[0m10:55:16.481944 [info ] [MainThread]:   compiled code at target\compiled\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:55:16.483943 [info ] [MainThread]: 
+[0m10:55:16.484943 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m10:55:16.487313 [debug] [MainThread]: Command `dbt test` failed at 10:55:16.487313 after 17.68 seconds
+[0m10:55:16.488722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D51C3CD050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D51C3CD110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D51B3FCA90>]}
+[0m10:55:16.490723 [debug] [MainThread]: Flushing usage events
+[0m10:55:17.874693 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:55:54.518334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024543279E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245432B1B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245432B1490>]}
+
+
+============================== 10:55:54.529435 | 7aa3a772-1b7d-4315-a78d-0a6135442bd3 ==============================
+[0m10:55:54.529435 [info ] [MainThread]: Running with dbt=1.10.13
+[0m10:55:54.532422 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'printer_width': '80', 'target_path': 'None', 'invocation_command': 'dbt test -s customer_cohorts', 'log_format': 'default', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m10:56:01.525087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7aa3a772-1b7d-4315-a78d-0a6135442bd3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002455EC272D0>]}
+[0m10:56:01.619872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7aa3a772-1b7d-4315-a78d-0a6135442bd3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002453FC500D0>]}
+[0m10:56:01.621872 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m10:56:02.542182 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m10:56:02.914668 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:56:02.919671 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:56:02.995554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7aa3a772-1b7d-4315-a78d-0a6135442bd3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024560732C90>]}
+[0m10:56:03.157330 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:56:03.160563 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:56:03.218899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7aa3a772-1b7d-4315-a78d-0a6135442bd3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024560B80FD0>]}
+[0m10:56:03.219905 [info ] [MainThread]: Found 10 models, 3 seeds, 97 data tests, 3 sources, 891 macros
+[0m10:56:03.219905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7aa3a772-1b7d-4315-a78d-0a6135442bd3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024560355A90>]}
+[0m10:56:03.223906 [info ] [MainThread]: 
+[0m10:56:03.224905 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:56:03.225898 [info ] [MainThread]: 
+[0m10:56:03.226966 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:56:03.234375 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention'
+[0m10:56:03.235376 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:56:03.235376 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test'
+[0m10:56:03.236371 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales'
+[0m10:56:03.237369 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_staging'
+[0m10:56:03.238370 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:56:03.240515 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:56:03.241514 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:56:09.217546 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2_dbt_test_staging, now list_dotted-hulling-477021-d2_dbt_test_core)
+[0m10:56:09.221540 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:56:10.722444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7aa3a772-1b7d-4315-a78d-0a6135442bd3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245607260D0>]}
+[0m10:56:10.724446 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:56:10.739015 [debug] [Thread-1 (]: Began running node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:56:10.741021 [debug] [Thread-2 (]: Began running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:56:10.743020 [debug] [Thread-3 (]: Began running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:56:10.744017 [debug] [Thread-4 (]: Began running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:56:10.746338 [info ] [Thread-1 (]: 1 of 4 START test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0  [RUN]
+[0m10:56:10.748339 [info ] [Thread-2 (]: 2 of 4 START test not_null_customer_cohorts_active_customers ................... [RUN]
+[0m10:56:10.750329 [info ] [Thread-3 (]: 3 of 4 START test not_null_customer_cohorts_cohort_month ....................... [RUN]
+[0m10:56:10.752334 [info ] [Thread-4 (]: 4 of 4 START test not_null_customer_cohorts_months_since_cohort ................ [RUN]
+[0m10:56:10.755330 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856'
+[0m10:56:10.758334 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7'
+[0m10:56:10.761341 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599'
+[0m10:56:10.763334 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50'
+[0m10:56:10.765335 [debug] [Thread-1 (]: Began compiling node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:56:10.767333 [debug] [Thread-2 (]: Began compiling node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:56:10.769353 [debug] [Thread-3 (]: Began compiling node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:56:10.771587 [debug] [Thread-4 (]: Began compiling node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:56:10.880131 [debug] [Thread-2 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:56:10.882126 [debug] [Thread-1 (]: Writing injected SQL for node "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"
+[0m10:56:10.896940 [debug] [Thread-3 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:56:10.913755 [debug] [Thread-4 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:56:10.918019 [debug] [Thread-2 (]: Began executing node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:56:10.921020 [debug] [Thread-1 (]: Began executing node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:56:10.946010 [debug] [Thread-3 (]: Began executing node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:56:10.976438 [debug] [Thread-4 (]: Began executing node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:56:11.002507 [debug] [Thread-2 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:56:11.012947 [debug] [Thread-1 (]: Writing runtime sql for node "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"
+[0m10:56:11.027566 [debug] [Thread-3 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:56:11.036577 [debug] [Thread-4 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:56:11.041797 [debug] [Thread-2 (]: On test.envquery.not_null_customer_cohorts_active_customers.144d6507f7: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select active_customers
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where active_customers is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:11.044803 [debug] [Thread-1 (]: On test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+
+where not(retention_rate_pct retention_rate_pct >= 0)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:11.046797 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:56:11.048798 [debug] [Thread-3 (]: On test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cohort_month
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where cohort_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:11.050798 [debug] [Thread-4 (]: On test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select months_since_cohort
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where months_since_cohort is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:56:11.051812 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:56:11.057810 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:56:11.060803 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:56:12.832047 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:3d2896c2-e7a9-41cd-9737-77fea817b5ee&page=queryresults
+[0m10:56:12.834107 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:3d2896c2-e7a9-41cd-9737-77fea817b5ee&page=queryresults
+[0m10:56:12.864315 [debug] [Thread-1 (]: Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:56:12.866302 [error] [Thread-1 (]: 1 of 4 ERROR dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0  [[31mERROR[0m in 2.11s]
+[0m10:56:12.869382 [debug] [Thread-1 (]: Finished running node test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856
+[0m10:56:12.871404 [debug] [Thread-7 (]: Marking all children of 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856' to be skipped because of status 'error'.  Reason: Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql.
+[0m10:56:13.136172 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:5c3b9f7a-7790-43e6-8a51-1949a847521a&page=queryresults
+[0m10:56:13.156029 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:3d8c5bd8-8e6c-43f7-8e67-dfefbf370586&page=queryresults
+[0m10:56:13.221720 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:07e3c97d-0728-4a83-83d5-301238337b09&page=queryresults
+[0m10:56:14.105864 [info ] [Thread-4 (]: 4 of 4 PASS not_null_customer_cohorts_months_since_cohort ...................... [[32mPASS[0m in 3.34s]
+[0m10:56:14.112127 [info ] [Thread-3 (]: 3 of 4 PASS not_null_customer_cohorts_cohort_month ............................. [[32mPASS[0m in 3.35s]
+[0m10:56:14.119553 [debug] [Thread-4 (]: Finished running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:56:14.116126 [info ] [Thread-2 (]: 2 of 4 PASS not_null_customer_cohorts_active_customers ......................... [[32mPASS[0m in 3.36s]
+[0m10:56:14.121553 [debug] [Thread-3 (]: Finished running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:56:14.125719 [debug] [Thread-2 (]: Finished running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:56:14.128718 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:56:14.130939 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:56:14.131942 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention' was properly closed.
+[0m10:56:14.132939 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test' was properly closed.
+[0m10:56:14.133944 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales' was properly closed.
+[0m10:56:14.135943 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_core' was properly closed.
+[0m10:56:14.136938 [debug] [MainThread]: Connection 'test.envquery.dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0.6500738856' was properly closed.
+[0m10:56:14.137951 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7' was properly closed.
+[0m10:56:14.139208 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599' was properly closed.
+[0m10:56:14.141207 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50' was properly closed.
+[0m10:56:14.143210 [info ] [MainThread]: 
+[0m10:56:14.144208 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 10.92 seconds (10.92s).
+[0m10:56:14.147213 [debug] [MainThread]: Command end result
+[0m10:56:14.449450 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:56:14.458444 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:56:14.478224 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\eki\Desktop\fsg\target\run_results.json
+[0m10:56:14.479231 [info ] [MainThread]: 
+[0m10:56:14.481224 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m10:56:14.482230 [info ] [MainThread]: 
+[0m10:56:14.483243 [error] [MainThread]: [31mFailure in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)[0m
+[0m10:56:14.485234 [error] [MainThread]:   Database Error in test dbt_utils_expression_is_true_customer_cohorts_retention_rate_pct__retention_rate_pct_0 (models\marts\retention\schema.yml)
+  Syntax error: Expected "," but got identifier "retention_rate_pct" at [18:30]
+  compiled code at target\run\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:56:14.486225 [info ] [MainThread]: 
+[0m10:56:14.487737 [info ] [MainThread]:   compiled code at target\compiled\envquery\models\marts\retention\schema.yml\dbt_utils_expression_is_true_c_00ae72fc77c02b674e72d3c8d3441733.sql
+[0m10:56:14.489812 [info ] [MainThread]: 
+[0m10:56:14.490807 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m10:56:14.493814 [debug] [MainThread]: Command `dbt test` failed at 10:56:14.493814 after 20.12 seconds
+[0m10:56:14.494811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002454301A7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245603D86D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002453C8D8C50>]}
+[0m10:56:14.496862 [debug] [MainThread]: Flushing usage events
+[0m10:56:16.290116 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:59:30.709128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10F63B050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10F6A3010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10F6A3250>]}
+
+
+============================== 10:59:30.714816 | 3d4af4e3-7905-4e32-8343-6ec8dfcb7df7 ==============================
+[0m10:59:30.714816 [info ] [MainThread]: Running with dbt=1.10.13
+[0m10:59:30.715376 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'printer_width': '80', 'write_json': 'True', 'invocation_command': 'dbt test -s customer_cohorts', 'no_print': 'None', 'warn_error': 'None', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m10:59:35.393788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3d4af4e3-7905-4e32-8343-6ec8dfcb7df7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12C79FFD0>]}
+[0m10:59:35.453168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3d4af4e3-7905-4e32-8343-6ec8dfcb7df7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10C020390>]}
+[0m10:59:35.454186 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m10:59:36.208822 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m10:59:36.491622 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:59:36.492622 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:59:36.558716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3d4af4e3-7905-4e32-8343-6ec8dfcb7df7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12CACC910>]}
+[0m10:59:36.728943 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:59:36.731943 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:59:36.795917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3d4af4e3-7905-4e32-8343-6ec8dfcb7df7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12CB9CB90>]}
+[0m10:59:36.796936 [info ] [MainThread]: Found 10 models, 3 seeds, 97 data tests, 3 sources, 891 macros
+[0m10:59:36.797932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d4af4e3-7905-4e32-8343-6ec8dfcb7df7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E12C6DF8D0>]}
+[0m10:59:36.803769 [info ] [MainThread]: 
+[0m10:59:36.804767 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:59:36.805826 [info ] [MainThread]: 
+[0m10:59:36.807172 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m10:59:36.815175 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_staging'
+[0m10:59:36.816172 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:59:36.816172 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales'
+[0m10:59:36.818172 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_marts_retention'
+[0m10:59:36.819172 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dotted-hulling-477021-d2_dbt_test_core'
+[0m10:59:36.820173 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:59:36.822279 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:59:36.822279 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:59:41.649261 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dotted-hulling-477021-d2_dbt_test_marts_retention, now list_dotted-hulling-477021-d2_dbt_test)
+[0m10:59:41.663419 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:59:42.676400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d4af4e3-7905-4e32-8343-6ec8dfcb7df7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10EDFD610>]}
+[0m10:59:42.678820 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:59:42.690369 [debug] [Thread-1 (]: Began running node test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a
+[0m10:59:42.692409 [debug] [Thread-2 (]: Began running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:59:42.693381 [debug] [Thread-3 (]: Began running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:59:42.694366 [debug] [Thread-4 (]: Began running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:59:42.695364 [info ] [Thread-1 (]: 1 of 4 START test dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0  [RUN]
+[0m10:59:42.697375 [info ] [Thread-2 (]: 2 of 4 START test not_null_customer_cohorts_active_customers ................... [RUN]
+[0m10:59:42.699552 [info ] [Thread-3 (]: 3 of 4 START test not_null_customer_cohorts_cohort_month ....................... [RUN]
+[0m10:59:42.701080 [info ] [Thread-4 (]: 4 of 4 START test not_null_customer_cohorts_months_since_cohort ................ [RUN]
+[0m10:59:42.703251 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a'
+[0m10:59:42.704253 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7'
+[0m10:59:42.707180 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599'
+[0m10:59:42.708186 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50'
+[0m10:59:42.710317 [debug] [Thread-1 (]: Began compiling node test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a
+[0m10:59:42.712320 [debug] [Thread-2 (]: Began compiling node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:59:42.713315 [debug] [Thread-3 (]: Began compiling node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:59:42.715328 [debug] [Thread-4 (]: Began compiling node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:59:42.760657 [debug] [Thread-1 (]: Writing injected SQL for node "test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a"
+[0m10:59:42.770603 [debug] [Thread-2 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:59:42.775609 [debug] [Thread-3 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:59:42.781624 [debug] [Thread-4 (]: Writing injected SQL for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:59:42.783602 [debug] [Thread-1 (]: Began executing node test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a
+[0m10:59:42.785606 [debug] [Thread-2 (]: Began executing node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:59:42.786604 [debug] [Thread-3 (]: Began executing node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:59:42.795607 [debug] [Thread-4 (]: Began executing node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:59:42.811604 [debug] [Thread-1 (]: Writing runtime sql for node "test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a"
+[0m10:59:42.815603 [debug] [Thread-2 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"
+[0m10:59:42.821843 [debug] [Thread-3 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"
+[0m10:59:42.826849 [debug] [Thread-4 (]: Writing runtime sql for node "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"
+[0m10:59:42.828849 [debug] [Thread-1 (]: On test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and retention_rate_pct >= 0 and retention_rate_pct <= 100
+)
+ as expression
+
+
+    from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:59:42.829954 [debug] [Thread-2 (]: On test.envquery.not_null_customer_cohorts_active_customers.144d6507f7: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_active_customers.144d6507f7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select active_customers
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where active_customers is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:59:42.830978 [debug] [Thread-3 (]: On test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cohort_month
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where cohort_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:59:42.832124 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:59:42.833158 [debug] [Thread-4 (]: On test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "envquery", "target_name": "dev", "node_id": "test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select months_since_cohort
+from `dotted-hulling-477021-d2`.`dbt_test_marts_retention`.`customer_cohorts`
+where months_since_cohort is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:59:42.833158 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:59:42.835163 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:59:42.838194 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:59:44.137917 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:5fbe5852-8694-438f-9446-f5de43f65d42&page=queryresults
+[0m10:59:44.152025 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:b042a897-6838-4020-a77b-b477d206fd99&page=queryresults
+[0m10:59:44.162241 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:a2c86223-b520-434c-a37e-bb8f876d1e8a&page=queryresults
+[0m10:59:44.178049 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dotted-hulling-477021-d2&j=bq:EU:648b31f0-75ed-4b2e-95df-eda951e4aa13&page=queryresults
+[0m10:59:44.751089 [info ] [Thread-1 (]: 1 of 4 PASS dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0  [[32mPASS[0m in 2.05s]
+[0m10:59:44.757103 [debug] [Thread-1 (]: Finished running node test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a
+[0m10:59:44.768097 [info ] [Thread-4 (]: 4 of 4 PASS not_null_customer_cohorts_months_since_cohort ...................... [[32mPASS[0m in 2.06s]
+[0m10:59:44.770985 [debug] [Thread-4 (]: Finished running node test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50
+[0m10:59:44.781127 [info ] [Thread-2 (]: 2 of 4 PASS not_null_customer_cohorts_active_customers ......................... [[32mPASS[0m in 2.08s]
+[0m10:59:44.784237 [info ] [Thread-3 (]: 3 of 4 PASS not_null_customer_cohorts_cohort_month ............................. [[32mPASS[0m in 2.08s]
+[0m10:59:44.785678 [debug] [Thread-2 (]: Finished running node test.envquery.not_null_customer_cohorts_active_customers.144d6507f7
+[0m10:59:44.787819 [debug] [Thread-3 (]: Finished running node test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599
+[0m10:59:44.790861 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:59:44.791880 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:59:44.792862 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_staging' was properly closed.
+[0m10:59:44.792862 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_marts_sales' was properly closed.
+[0m10:59:44.793862 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test' was properly closed.
+[0m10:59:44.793862 [debug] [MainThread]: Connection 'list_dotted-hulling-477021-d2_dbt_test_core' was properly closed.
+[0m10:59:44.794862 [debug] [MainThread]: Connection 'test.envquery.dbt_expectations_expect_column_values_to_be_between_customer_cohorts_retention_rate_pct__100__0.02f182431a' was properly closed.
+[0m10:59:44.794862 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_active_customers.144d6507f7' was properly closed.
+[0m10:59:44.795880 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_cohort_month.7578d4a599' was properly closed.
+[0m10:59:44.795880 [debug] [MainThread]: Connection 'test.envquery.not_null_customer_cohorts_months_since_cohort.7b31f4cc50' was properly closed.
+[0m10:59:44.796863 [info ] [MainThread]: 
+[0m10:59:44.796863 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 7.99 seconds (7.99s).
+[0m10:59:44.798866 [debug] [MainThread]: Command end result
+[0m10:59:44.873968 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\eki\Desktop\fsg\target\manifest.json
+[0m10:59:44.876970 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\eki\Desktop\fsg\target\semantic_manifest.json
+[0m10:59:44.885004 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\eki\Desktop\fsg\target\run_results.json
+[0m10:59:44.886004 [info ] [MainThread]: 
+[0m10:59:44.887002 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:59:44.887002 [info ] [MainThread]: 
+[0m10:59:44.888002 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m10:59:44.890008 [debug] [MainThread]: Command `dbt test` succeeded at 10:59:44.889002 after 14.28 seconds
+[0m10:59:44.890008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10F6A1F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10F6A24D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E10898F150>]}
+[0m10:59:44.891064 [debug] [MainThread]: Flushing usage events
+[0m10:59:45.945673 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:11:14.546323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025668449C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256684AA890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256684A9F10>]}
+
+
+============================== 13:11:14.561276 | 7eab206a-661d-4687-ad83-fdc7a7384d1d ==============================
+[0m13:11:14.561276 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:11:14.563263 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'use_colors': 'True', 'log_format': 'default', 'target_path': 'None', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'warn_error': 'None', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt deps', 'printer_width': '80', 'write_json': 'True'}
+[0m13:11:14.845131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7eab206a-661d-4687-ad83-fdc7a7384d1d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002566508B2D0>]}
+[0m13:11:14.969973 [debug] [MainThread]: Set downloads directory='C:\Users\eki\AppData\Local\Temp\dbt-downloads-f428r63t'
+[0m13:11:14.971957 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:11:15.748674 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:11:15.756673 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:11:16.278788 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:11:16.310820 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m13:11:16.803925 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m13:11:16.810912 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m13:11:16.814895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '7eab206a-661d-4687-ad83-fdc7a7384d1d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025669676D10>]}
+[0m13:11:16.827906 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m13:11:17.333590 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m13:11:17.357169 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m13:11:17.881725 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m13:11:17.921692 [error] [MainThread]: Encountered an error:
+Found duplicate project "dbt_date". This occurs when a dependency has the same project name as some other dependency.
+[0m13:11:18.155739 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\requires.py", line 303, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\cli\main.py", line 461, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\task\deps.py", line 223, in run
+    self.lock()
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\task\deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\deps\resolver.py", line 136, in resolve_packages
+    _check_for_duplicate_project_names(resolved, project, renderer)
+  File "C:\Users\eki\Desktop\fsg\envquery\Lib\site-packages\dbt\deps\resolver.py", line 110, in _check_for_duplicate_project_names
+    raise DuplicateProjectDependencyError(project_name)
+dbt.exceptions.DuplicateProjectDependencyError: Found duplicate project "dbt_date". This occurs when a dependency has the same project name as some other dependency.
+
+[0m13:11:18.160255 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PackageRedirectDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:11:18.163585 [debug] [MainThread]: Command `dbt deps` failed at 13:11:18.162239 after 3.79 seconds
+[0m13:11:18.164627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025661A68D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256680E7ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002566176F050>]}
+[0m13:11:18.165627 [debug] [MainThread]: Flushing usage events
+[0m13:11:19.284472 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:12:32.398169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E71A110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E751390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E4B5C10>]}
+
+
+============================== 13:12:32.405854 | 983e7588-35d9-46bb-9fda-3df7f1242436 ==============================
+[0m13:12:32.405854 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:12:32.406827 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt deps', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\eki\\Desktop\\fsg', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_path': 'C:\\Users\\eki\\Desktop\\fsg\\logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m13:12:32.580586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '983e7588-35d9-46bb-9fda-3df7f1242436', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860F848F50>]}
+[0m13:12:32.634684 [debug] [MainThread]: Set downloads directory='C:\Users\eki\AppData\Local\Temp\dbt-downloads-vp5fv7o4'
+[0m13:12:32.636693 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:12:33.684093 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:12:33.692084 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:12:35.048254 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:12:35.068248 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m13:12:35.581541 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m13:12:35.603527 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m13:12:36.103311 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m13:12:36.135504 [info ] [MainThread]: Updating lock file in file path: C:\Users\eki\Desktop\fsg/package-lock.yml
+[0m13:12:36.643346 [debug] [MainThread]: Set downloads directory='C:\Users\eki\AppData\Local\Temp\dbt-downloads-3fzubv9c'
+[0m13:12:36.664389 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m13:12:37.785877 [info ] [MainThread]: Installed from version 1.3.2
+[0m13:12:37.786872 [info ] [MainThread]: Up to date!
+[0m13:12:37.787871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '983e7588-35d9-46bb-9fda-3df7f1242436', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860F8435D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860F8A7050>]}
+[0m13:12:37.787871 [info ] [MainThread]: Installing metaplane/dbt_expectations
+[0m13:12:43.273805 [info ] [MainThread]: Installed from version 0.10.9
+[0m13:12:43.274892 [info ] [MainThread]: Up to date!
+[0m13:12:43.275891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '983e7588-35d9-46bb-9fda-3df7f1242436', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860F89C8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E7FED90>]}
+[0m13:12:43.276890 [info ] [MainThread]: Installing godatadriven/dbt_date
+[0m13:12:44.315259 [info ] [MainThread]: Installed from version 0.17.0
+[0m13:12:44.316262 [info ] [MainThread]: Up to date!
+[0m13:12:44.317335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '983e7588-35d9-46bb-9fda-3df7f1242436', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E77C850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002860E7FFB50>]}
+[0m13:12:44.321154 [debug] [MainThread]: Command `dbt deps` succeeded at 13:12:44.321154 after 12.04 seconds
+[0m13:12:44.322185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028607D48C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028607A4EE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028607A4F150>]}
+[0m13:12:44.323475 [debug] [MainThread]: Flushing usage events
+[0m13:12:45.252444 [debug] [MainThread]: An error was encountered while trying to flush usage events
