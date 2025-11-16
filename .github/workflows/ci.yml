@@ -32,6 +32,9 @@ jobs:
       - name: Install dbt packages
         run: dbt deps --target dev
 
+      - name: Verify packages installed
+        run: dbt deps --target dev  # Run twice to ensure installation
+
       - name: dbt debug
         run: dbt debug --target dev
 
