@@ -4,7 +4,7 @@ sources:
   - name: raw_customers
     description: "Raw customer data (seeded from CSV). Source of truth for B2C customers."
     database: dotted-hulling-477021-d2
-    schema: "raw_Staging"
+    schema: "raw_staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 24, period: hour}
@@ -57,7 +57,7 @@ sources:
   - name: raw_organizations
     description: "Raw B2B organization data (seeded from CSV). Used for account-based analytics."
     database: dotted-hulling-477021-d2
-    schema: "raw_Staging"
+    schema: "raw_staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 48, period: hour}
@@ -101,7 +101,7 @@ sources:
   - name: raw_products
     description: "Raw product catalog (seeded from CSV). Foundation for revenue & inventory analysis."
     database: dotted-hulling-477021-d2
-    schema: "raw_Staging"
+    schema: "raw_staging"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 24, period: hour}
