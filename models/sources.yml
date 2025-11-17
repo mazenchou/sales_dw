@@ -4,161 +4,154 @@ sources:
   - name: raw_customers
     description: "Raw customer data (seeded from CSV). Source of truth for B2C customers."
     database: dotted-hulling-477021-d2
-    schema: "raw_staging"
+    schema: "{{ env_var('DBT_RAW_SCHEMA', 'dev_sales_dw') }}"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 24, period: hour}
-      error_after: {count: 168, period: hour}
+      error_after: {count: 168, period: hour}  # 7 days
     loaded_at_field: _uploaded_at
+
     tables:
       - name: customers
-        identifier: "customers_100"
+        identifier: customers
         description: "Individual customer records"
         columns:
-          - name: Index
+          - name: index
             description: "Row number from source CSV (not PK)"
             tests:
               - not_null
-          - name: "`Customer Id`"
+          - name: customer_id
             description: "Business key — unique across customers"
             tests:
               - unique
               - not_null
-          - name: "`First Name`"
+          - name: first_name
             tests: [not_null]
-          - name: "`Last Name`"
+          - name: last_name
             tests: [not_null]
-          - name: Company
+          - name: company
             description: "Employer or affiliated organization (nullable)"
-          - name: City
+          - name: city
             tests: [not_null]
-          - name: Country
+          - name: country
             tests: [not_null]
-          - name: "`Phone 1`"
+          - name: phone_1
             description: "Primary contact number"
-          - name: "`Phone 2`"
+          - name: phone_2
             description: "Secondary contact number"
-          - name: Email
+          - name: email
             tests:
               - not_null
               - dbt_expectations.expect_column_values_to_match_regex:
-                  arguments:
-                    regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'
-          - name: "`Subscription Date`"
+                  regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+          - name: subscription_date
             data_type: date
             description: "When customer subscribed (ISO 'YYYY-MM-DD')"
             tests:
               - not_null
-          - name: Website
+              - dbt_expectations.expect_column_values_to_be_in_future:
+                  threshold: false  # must be in past or today
+          - name: website
             description: "Personal or company website (nullable)"
+
 
   - name: raw_organizations
     description: "Raw B2B organization data (seeded from CSV). Used for account-based analytics."
     database: dotted-hulling-477021-d2
-    schema: "raw_staging"
+    schema: "{{ env_var('DBT_RAW_SCHEMA', 'dev_sales_dw') }}"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 48, period: hour}
-      error_after: {count: 336, period: hour}
+      error_after: {count: 336, period: hour}  # 14 days
     loaded_at_field: _uploaded_at
+
     tables:
       - name: organizations
-        identifier: "organizations-100"
+        identifier: organizations
         description: "Business organization records"
         columns:
-          - name: Index
+          - name: index
             tests: [not_null]
-          - name: "`Organization Id`"
+          - name: organization_id
             description: "Business key — unique across organizations"
             tests:
               - unique
               - not_null
-          - name: Name
+          - name: name
             tests: [not_null]
-          - name: Website
-          - name: Country
+          - name: website
+          - name: country
             tests: [not_null]
-          - name: Description
-          - name: Founded
+          - name: description
+          - name: founded
             data_type: int
             description: "Year founded (e.g., 2010)"
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 1800
-                    max_value: "{{ modules.datetime.datetime.now().year }}"
-          - name: Industry
-          - name: "`Number of employees`"
+                  min_value: 1800
+                  max_value: "{{ modules.datetime.datetime.now().year }}"
+          - name: industry
+          - name: number_of_employees
             data_type: int
             tests:
               - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 1
-                    max_value: 1000000
+                  min_value: 1
+                  max_value: 1000000
           - name: products
+
 
   - name: raw_products
     description: "Raw product catalog (seeded from CSV). Foundation for revenue & inventory analysis."
     database: dotted-hulling-477021-d2
-    schema: "raw_staging"
+    schema: "{{ env_var('DBT_RAW_SCHEMA', 'dev_sales_dw') }}"
     loader: "csv_seed"
     freshness:
       warn_after: {count: 24, period: hour}
       error_after: {count: 168, period: hour}
     loaded_at_field: _uploaded_at
+
     tables:
       - name: products
-        identifier: "products-100"
+        identifier: products
         description: "Sellable product items"
         columns:
-          - name: Index
+          - name: index
             tests: [not_null]
-          - name: Name
+          - name: name
             tests: [not_null]
-          - name: Description
-          - name: Brand
+          - name: description
+          - name: brand
             tests: [not_null]
-          - name: Category
+          - name: category
             tests: [not_null]
-          - name: Price
+          - name: price
             data_type: numeric
             tests:
               - not_null
               - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 0.01
-                    max_value: 100000
-          - name: Currency
+                  min_value: 0.01
+                  max_value: 100000
+          - name: currency
             tests:
               - not_null
-              - accepted_values:
-                  arguments:
-                    values: ['USD', 'EUR', 'GBP']
-          - name: Stock
+              - accepted_values: {values: ['USD', 'EUR', 'GBP']}
+          - name: stock
             data_type: int
             tests:
               - not_null
-              - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 0
-                    max_value: 1000000
-          - name: EAN
+              - dbt_expectations.expect_column_values_to_be_greater_than_or_equal_to:
+                  value: 0
+          - name: ean
             description: "European Article Number (13-digit barcode)"
             tests:
-              - dbt_expectations.expect_column_values_to_be_between:
-                  arguments:
-                    min_value: 1 
-                    max_value: 9999999999999
-          - name: Color
-          - name: Size
-          - name: Availability
+              - dbt_expectations.expect_column_values_to_match_regex:
+                  regex: '^\d{13}$'
+          - name: color
+          - name: size
+          - name: availability
             tests:
-              - accepted_values:
-                  arguments:
-                    values: ['In Stock', 'Out of Stock', 'Pre-order', 'Limited Stock', 'Backorder', 'Discontinued', 'Unknown']
-                    config:
-                      severity: warn
-          - name: "`Internal ID`"
+              - accepted_values: {values: ['In Stock', 'Out of Stock', 'Pre-order']}
+          - name: internal_id
             description: "Internal SKU — may be duplicate if multi-variant"
             tests: [not_null]
 

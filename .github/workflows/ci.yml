@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DBT_PROFILES_DIR: ${{ github.workspace }}
+      GCLOUD_SA_KEY: ${{ secrets.GCP_SA_KEY }}
 
     steps:
       - name: Checkout code
@@ -22,30 +23,15 @@ jobs:
 
       - name: Install dbt and dependencies
         run: |
-          pip install dbt-bigquery
+          pip install dbt-bigquery dbt-utils dbt-expectations
 
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      - name: Install dbt packages
-        run: |
-          echo "Installing packages from packages.yml..."
-          dbt deps --target dev
-          echo "Installed packages:"
-          ls -la dbt_packages/
-          # Fail if packages missing
-          test -d dbt_packages/dbt_utils
-          test -d dbt_packages/dbt_expectations
-
-      - name: Clean install dbt packages
-        run: |
-          rm -rf dbt_packages
-          dbt deps --target dev
-
-      - name: Verify packages installed
-        run: dbt deps --target dev  # Run twice to ensure installation
+      - name: Set quota project (fix ADC warning)
+        run: gcloud auth application-default set-quota-project dotted-hulling-477021-d2
 
       - name: dbt debug
         run: dbt debug --target dev
