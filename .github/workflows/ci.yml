@@ -46,6 +46,20 @@ jobs:
       - name: dbt build (run + test)
         run: dbt build --target dev --fail-fast
 
+      # ✅ ADD DATA QUALITY INSIGHTS HERE
+      - name: Data Quality Insights
+        run: |
+          echo "=== Revenue Distribution Analysis ==="
+          bq query --use_legacy_sql=false '
+            SELECT 
+              MIN(total_revenue) as min_revenue,
+              MAX(total_revenue) as max_revenue,
+              AVG(total_revenue) as avg_revenue,
+              COUNT(*) as total_records,
+              COUNT(CASE WHEN total_revenue > 10000000 THEN 1 END) as over_10M_count
+            FROM `dotted-hulling-477021-d2.raw_staging_marts_sales.monthly_revenue_by_customer_type`
+          ' || echo "Table might not exist yet"
+
       - name: Generate docs
         run: dbt docs generate --target dev
 
