@@ -1,14 +1,16 @@
-# .github/workflows/ci.yml
-name: dbt CI - Fast PR Validation
+# .github/workflows/cd.yml  
+## This runs when code is pushed to 'main' branch
+name: dbt Continuous Deployment
 
 on:
-  pull_request:
-    branches: [main, develop]
+  push:
+    branches: [main]
 
 jobs:
-  fast-validation:
-    name: Quick PR Checks
+  deploy-production:
+    name: Deploy to Production
     runs-on: ubuntu-latest
+    environment: production
     env:
       DBT_PROFILES_DIR: ./
     
@@ -29,14 +31,10 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      - name: Install packages
-        run: dbt deps --target dev
-
-      - name: Quick validation
+      - name: Production deployment
         run: |
-          dbt compile --target dev
-          echo "✅ Syntax check passed"
-
-      - name: Test changed models only
-        run: |
-          dbt test --select state:modified --target dev --fail-fast || echo "No changed models to test"
+          dbt deps --target prod
+          dbt run --target prod
+          dbt test --target prod
+          dbt docs generate --target prod
+          echo "🎉 Production deployment completed!"
