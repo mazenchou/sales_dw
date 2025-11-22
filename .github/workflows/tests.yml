@@ -1,0 +1,51 @@
+# .github/workflows/tests.yml
+#Run EVERYTHING - full test suite, all models, all tests
+## This runs when code is pushed to 'develop' or any created one just for testing branch
+
+name: dbt Comprehensive Testing
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:  # Manual trigger option
+
+jobs:
+  full-test-suite:
+    name: Full Test Suite
+    runs-on: ubuntu-latest
+    env:
+      DBT_PROFILES_DIR: ./
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt
+        run: pip install dbt-bigquery
+
+      - name: Authenticate to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Install packages
+        run: dbt deps --target dev
+
+      - name: Load seed data
+        run: dbt seed --target raw
+
+      - name: Run complete test suite
+        run: dbt build --target dev --fail-fast
+
+      - name: Generate documentation
+        run: dbt docs generate --target dev
+
+      - name: Data quality insights
+        run: |
+          echo "=== Data Quality Report ==="
+          echo "All models and tests completed successfully!"

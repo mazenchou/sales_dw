@@ -174,7 +174,7 @@ sources:
     loaded_at_field: _uploaded_at
     tables:
       - name: people
-        identifier: "people_sample"
+        identifier: "people-100"
         description: "Individual people/employee records"
         columns:
           - name: Index
@@ -198,7 +198,7 @@ sources:
     loaded_at_field: _uploaded_at
     tables:
       - name: leads
-        identifier: "leads_sample"
+        identifier: "leads-100"
         description: "Sales leads and prospect records"
         columns:
           - name: Index
