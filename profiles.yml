@@ -15,7 +15,7 @@ envquery:
         type: bigquery  
         method: oauth                    
         project: dotted-hulling-477021-d2 # Same for now, but separate in real scenario
-        dataset: raw_staging_staging
+        dataset: raw_staging
         threads: 4
         location: EU
 
